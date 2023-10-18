@@ -3,10 +3,10 @@
 - Repository for CS5167 User Interface I project #2, Alterna-Canvas, the game.
 - Developed by Jack Margeson, Alex Yang, Kody Penn, and Al Ayoola.
 
-# Sketches
+## Sketches
 
-# Requirements/Interviews
+## Requirements/Interviews
 
-# Survey/Contextual Inquiry
+## Survey/Contextual Inquiry
 
-# Interface Description
+## Interface Description
