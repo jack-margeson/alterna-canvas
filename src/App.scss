@@ -1,0 +1,66 @@
+.main {
+	max-width: 100vw;
+	min-width: 100vw;
+	max-height: 100vh;
+	min-height: 100vh;
+
+	overflow: hidden;
+	background-color: grey;
+
+	display: flex;
+	flex-direction: column;
+}
+
+a {
+	color: inherit;
+}
+
+.display-container {
+	display: flex;
+	flex-grow: 52;
+	flex-direction: row;
+}
+
+.sidebar-container {
+	display: flex;
+	flex-direction: column;
+	flex-grow: 1;
+}
+
+.profile-container {
+	display: flex;
+	flex-grow: 1;
+	background-color: lightgreen;
+}
+
+.navigation-container {
+	display: flex;
+	flex-grow: 4;
+	background-color: lightcoral;
+}
+
+.body-container {
+	display: flex;
+	flex-direction: column;
+	flex-grow: 28;
+}
+
+.titlebar-container {
+	display: flex;
+	flex-grow: 1;
+	background-color: antiquewhite;
+}
+
+.content-container {
+	display: flex;
+	background-color: lightgrey;
+	flex-grow: 10;
+}
+
+.global-footer-container {
+	display: flex;
+	flex-grow: 1;
+	background-color: lightblue;
+	align-items: center;
+	justify-content: center;
+}
