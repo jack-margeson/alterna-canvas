@@ -1,23 +1,29 @@
 import "./App.scss";
 
+//import  ClassPage  from "./class-page/ClassPage";
+import Content from "./content/Content";
+import Navbar from "./navbar/Navbar";
+import Profile from "./profile/Profile";
+import Titlebar from "./titlebar/Titlebar";
+
 function App() {
 	return (
 		<div className="main">
 			<div className="display-container">
 				<div className="sidebar-container">
 					<div className="profile-container">
-						<p>profile comp here</p>
+						<Profile></Profile>
 					</div>
 					<div className="navigation-container">
-						<p>navigation comp here</p>
+						<Navbar></Navbar>
 					</div>
 				</div>
 				<div className="body-container">
 					<div className="titlebar-container">
-						<p>titlebar comp here</p>
+						<Titlebar></Titlebar>
 					</div>
 					<div className="content-container">
-						<p>main content comp here</p>
+						<Content></Content>
 					</div>
 				</div>
 			</div>
