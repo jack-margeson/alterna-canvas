@@ -1,9 +1,9 @@
 import "./Titlebar.scss";
 
-function Titlebar() {
+function Titlebar({text}) {
 	return (
 		<div className="titlebar-main">
-			<p>titlebar</p>
+			<p className="titlebar-title">{text}</p>
 		</div>
 	);
 }
