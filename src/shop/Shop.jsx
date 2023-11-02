@@ -1,4 +1,4 @@
-import "./Shop.css";
+import "./Shop.scss";
 import ShopItem from "./ShopItem";
 
 function Shop() {

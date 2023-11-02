@@ -1,4 +1,4 @@
-import "./ShopItem.css";
+import "./ShopItem.scss";
 
 function ShopItem({buttext, desc}) {
 	return (
