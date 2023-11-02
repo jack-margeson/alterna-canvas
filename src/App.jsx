@@ -31,7 +31,7 @@ function App() {
 						<Titlebar text={titletext}></Titlebar>
 					</div>
 					<div className="content-container">
-						<Content></Content>
+						<Content page={titletext}></Content>
 					</div>
 				</div>
 			</div>
