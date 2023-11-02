@@ -1,0 +1,52 @@
+/*https://codepen.io/coralielm/pen/BazQOXZ*/
+.leaderboard-main {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+  
+.container {
+	display: flex;
+	align-items: flex-end;
+	margin-top: 30px;
+	margin-bottom: 30px;;
+}
+
+.podium__item {
+	width: 200px;
+}
+  
+.podium__rank {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 35px;
+	color: #000000;
+}
+  
+.podium__city {
+	text-align: center;
+	padding: 0 .5rem;
+}
+ 
+.podium .first {
+	height: 250px;
+	background: gold;
+}
+
+.podium .second {
+	height: 200px;
+	background: silver;
+  }
+  
+.podium .third {
+	height: 150px;
+	background: #cd7f32;
+}
+
+.text-area{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
