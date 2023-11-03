@@ -1,8 +1,13 @@
-function ClassCard ({childToParent}){
+import "./Announcements.scss"
+
+function Announcements ({childToParent}){
     childToParent("Classes")
+    
     return(
-        <p>Under Construction</p>
+        <div className="announcements-main">
+            <p>Under Construction</p>
+        </div>
     )
 }
 
-export default ClassCard;
+export default Announcements;
