@@ -2,6 +2,7 @@ import "./Content.scss";
 import Shop from "../shop/Shop";
 import Leaderboard from "../leaderboard/Leaderboard";
 import Card from "../class-card/ClassCard";
+import Announcements from "../announcements/Announcements";
 import { useState } from 'react';
 
 
@@ -30,7 +31,7 @@ function Content({ page }) {
 			return (
 				<div className="content-main">
 					<div className="class-card-container">
-						<Card childToParent={childToParent} course={"1"}></Card>
+						<Card childToParent={childToParent} course={"1"} title={"CS5101"} upcoming={"HW1"}></Card>
 					</div>
 				</div>
 			);
@@ -39,7 +40,7 @@ function Content({ page }) {
 			return (
 				<div className="content-main">
 					<div className="class-card-container">
-						<Card childToParent={childToParent} course={"2"}></Card>
+						<Card childToParent={childToParent} course={"2"} title={"CS5125"} upcoming={"Quiz 3"}></Card>
 					</div>
 				</div>
 			);
@@ -48,7 +49,7 @@ function Content({ page }) {
 			return (
 				<div className="content-main">
 					<div className="class-card-container">
-						<Card childToParent={childToParent} course={"3"}></Card>
+						<Card childToParent={childToParent} course={"3"} title={"CS6007"} upcoming={"Quiz 4"}></Card>
 					</div>
 				</div>
 			);
@@ -88,7 +89,7 @@ function Content({ page }) {
 	else if (page === "Announcements") {
 		return (
 			<div className="content-main">
-				<p>Announcements under construction</p>
+				<Announcements childToParent={childToParent}></Announcements>
 			</div>
 		);
 	}

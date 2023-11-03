@@ -5,12 +5,14 @@ function Navbar({childToParent}) {
     const [styleName1, setStyleName1] = useState("navbar-button-active");
 	const [styleName2, setStyleName2] = useState("navbar-button");
 	const [styleName3, setStyleName3] = useState("navbar-button");
+	const [styleName4, setStyleName4] = useState("navbar-button");
 
 	const classesSelected = () => {
         childToParent("Classes");
         setStyleName1("navbar-button-active");
 		setStyleName2("navbar-button");
 		setStyleName3("navbar-button");
+		setStyleName4("navbar-button");
     };
 
 	const shopSelected = () => {
@@ -18,6 +20,7 @@ function Navbar({childToParent}) {
 		setStyleName1("navbar-button");
 		setStyleName2("navbar-button-active");
 		setStyleName3("navbar-button");
+		setStyleName4("navbar-button");
     };
 
 	const leaderboardSelected = () => {
@@ -25,6 +28,14 @@ function Navbar({childToParent}) {
         setStyleName1("navbar-button");
 		setStyleName2("navbar-button");
 		setStyleName3("navbar-button-active");
+		setStyleName4("navbar-button");
+    };
+	const announcementsSelected = () => {
+        childToParent("Announcements");
+        setStyleName1("navbar-button");
+		setStyleName2("navbar-button");
+		setStyleName3("navbar-button");
+		setStyleName4("navbar-button-active");
     };
 
 	return (
@@ -38,6 +49,9 @@ function Navbar({childToParent}) {
 				</li>
 				<li>
 					<button className={styleName3} onClick={leaderboardSelected}>Leaderboard</button>
+				</li>
+				<li>
+					<button className={styleName4} onClick={announcementsSelected}>Announcements</button>
 				</li>
 			</ul>
 		</div>

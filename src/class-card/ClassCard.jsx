@@ -4,7 +4,7 @@ import CardContent from "@mui/material/CardContent";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 
-function ClassCard ({childToParent, course}){
+function ClassCard ({childToParent, course, title, upcoming}){
     const cardSelected = () => {
         childToParent(course);
     }
@@ -16,13 +16,13 @@ function ClassCard ({childToParent, course}){
                     {course}
                 </Typography>
                 <Typography variant="h5" component="div">
-                    User Interface I
+                    {title}
                 </Typography>
                 <Typography sx={{ mb: 1.5 }} color="text.secondary">
                     Undergraduate
                 </Typography>
                 <Typography variant="body2">
-                    Lorem ipsum. List of upcoming <br></br>assignments or something.
+                    {upcoming}
                 </Typography>
             </CardContent>
             <CardActions>
