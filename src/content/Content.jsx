@@ -20,36 +20,36 @@ function Content({ page }) {
 			return (
 				<div className="content-main">
 					<div className="class-card-container">
-						<Card childToParent={childToParent} course={"1"}></Card>
-						<Card childToParent={childToParent} course={"2"}></Card>
-						<Card childToParent={childToParent} course={"3"}></Card>
+						<Card childToParent={childToParent} course={"CS5101"} title={"Automata"} upcoming={"HW1"}></Card>
+						<Card childToParent={childToParent} course={"CS5125"} title={"UI"} upcoming={"Quiz 3"}></Card>
+						<Card childToParent={childToParent} course={"CS6007"} title={"Requirements Engineering"} upcoming={"Quiz 4"}></Card>
 					</div>
 				</div>
 			);
 		}
-		else if (card === "1"){
+		else if (card === "CS5101"){
 			return (
 				<div className="content-main">
 					<div className="class-card-container">
-						<Card childToParent={childToParent} course={"1"} title={"CS5101"} upcoming={"HW1"}></Card>
+						<Card childToParent={childToParent} course={"CS5101"} title={"Automata"} upcoming={"HW1"}></Card>
 					</div>
 				</div>
 			);
 		}
-		else if (card === "2"){
+		else if (card === "CS5125"){
 			return (
 				<div className="content-main">
 					<div className="class-card-container">
-						<Card childToParent={childToParent} course={"2"} title={"CS5125"} upcoming={"Quiz 3"}></Card>
+						<Card childToParent={childToParent} course={"CS5125"} title={"UI"} upcoming={"Quiz 3"}></Card>
 					</div>
 				</div>
 			);
 		}
-		else if (card === "3"){
+		else if (card === "CS6007"){
 			return (
 				<div className="content-main">
 					<div className="class-card-container">
-						<Card childToParent={childToParent} course={"3"} title={"CS6007"} upcoming={"Quiz 4"}></Card>
+						<Card childToParent={childToParent} course={"CS6007"} title={"Requirements Engineering"} upcoming={"Quiz 4"}></Card>
 					</div>
 				</div>
 			);
