@@ -1,7 +1,9 @@
 import "./Shop.scss";
 import ShopItem from "./ShopItem";
 
-function Shop() {
+function Shop({childToParent}) {
+    childToParent("Classes");
+
 	return (
 		<div className="shop-main">
             <ul>

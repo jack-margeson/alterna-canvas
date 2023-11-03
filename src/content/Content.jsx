@@ -1,59 +1,81 @@
 import "./Content.scss";
 import Shop from "../shop/Shop";
 import Leaderboard from "../leaderboard/Leaderboard";
+import Card from "../class-card/ClassCard";
+import { useState } from 'react';
 
-import Card from "@mui/material/Card";
-import CardActions from "@mui/material/CardActions";
-import CardContent from "@mui/material/CardContent";
-import Button from "@mui/material/Button";
-import Typography from "@mui/material/Typography";
-
-let card = (
-	<Card sx={{ minWidth: 275 }}>
-		<CardContent>
-			<Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
-				CS5167
-			</Typography>
-			<Typography variant="h5" component="div">
-				User Interface I
-			</Typography>
-			<Typography sx={{ mb: 1.5 }} color="text.secondary">
-				Undergraduate
-			</Typography>
-			<Typography variant="body2">
-				Lorem ipsum. List of upcoming <br></br>assignments or something.
-			</Typography>
-		</CardContent>
-		<CardActions>
-			<Button size="small">Go to Class Page</Button>
-		</CardActions>
-	</Card>
-);
 
 function Content({ page }) {
+	const [card, setCard] = useState("Classes");
+  
+  	const childToParent = (childdata) => {
+    	setCard(childdata);
+  	}
+
+
+
 	if (page === "Classes") {
-		return (
-			<div className="content-main">
-				<div className="class-card-container">
-					{card}
-					{card}
-					{card}
-					{card}
-					{card}
-					{card}
+		if (card === page){
+			return (
+				<div className="content-main">
+					<div className="class-card-container">
+						<Card childToParent={childToParent} course={"1"}></Card>
+						<Card childToParent={childToParent} course={"2"}></Card>
+						<Card childToParent={childToParent} course={"3"}></Card>
+					</div>
 				</div>
-			</div>
-		);
-	} else if (page === "Shop") {
+			);
+		}
+		else if (card === "1"){
+			return (
+				<div className="content-main">
+					<div className="class-card-container">
+						<Card childToParent={childToParent} course={"1"}></Card>
+					</div>
+				</div>
+			);
+		}
+		else if (card === "2"){
+			return (
+				<div className="content-main">
+					<div className="class-card-container">
+						<Card childToParent={childToParent} course={"2"}></Card>
+					</div>
+				</div>
+			);
+		}
+		else if (card === "3"){
+			return (
+				<div className="content-main">
+					<div className="class-card-container">
+						<Card childToParent={childToParent} course={"3"}></Card>
+					</div>
+				</div>
+			);
+		}
+		else{
+			return (
+				<div className="content-main">
+					<div className="class-card-container">
+						<p>problemo</p>
+					</div>
+				</div>
+			);
+		}
+		
+	}
+	else if (page === "Shop") {
 		return (
 			<div className="content-main">
-				<Shop></Shop>
+				<Shop childToParent={childToParent}></Shop>
 			</div>
 		);
-	} else if (page === "Leaderboard") {
+	} 
+	else if (page === "Leaderboard") {
 		return (
 			<div className="content-main">
 				<Leaderboard
+					childToParent={childToParent}
 					first={"Kody Penn, 2400pts"}
 					second={"Jack Margeson, 2373pts"}
 					third={"Alex Yang, 2201pts"}
@@ -62,6 +84,18 @@ function Content({ page }) {
 				></Leaderboard>
 			</div>
 		);
+	}
+	else if (page === "Announcements") {
+		return (
+			<div className="content-main">
+				<p>Announcements under construction</p>
+			</div>
+		);
+	}
+	else{
+		return(
+			<p>problemo in content.jsx page</p>
+		)
 	}
 }
 

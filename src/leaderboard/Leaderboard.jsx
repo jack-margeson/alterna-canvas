@@ -1,7 +1,9 @@
 /*https://codepen.io/coralielm/pen/BazQOXZ*/
 import "./Leaderboard.scss";
 
-function Leaderboard({first, second, third, totalpts, rank}) {
+function Leaderboard({childToParent, first, second, third, totalpts, rank}) {
+    childToParent("Classes");
+
 	return (
         <div className="leaderboard-main">
             <div className="container podium">
