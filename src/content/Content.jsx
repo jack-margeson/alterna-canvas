@@ -12,22 +12,20 @@ let card = (
 	<Card sx={{ minWidth: 275 }}>
 		<CardContent>
 			<Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
-				Word of the Day
+				CS5167
 			</Typography>
 			<Typography variant="h5" component="div">
-				benevolent
+				User Interface I
 			</Typography>
 			<Typography sx={{ mb: 1.5 }} color="text.secondary">
-				adjective
+				Undergraduate
 			</Typography>
 			<Typography variant="body2">
-				well meaning and kindly.
-				<br />
-				{'"a benevolent smile"'}
+				Lorem ipsum. List of upcoming <br></br>assignments or something.
 			</Typography>
 		</CardContent>
 		<CardActions>
-			<Button size="small">Learn More</Button>
+			<Button size="small">Go to Class Page</Button>
 		</CardActions>
 	</Card>
 );
