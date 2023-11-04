@@ -3,58 +3,70 @@ import Shop from "../shop/Shop";
 import Leaderboard from "../leaderboard/Leaderboard";
 import Card from "../class-card/ClassCard";
 import Announcements from "../announcements/Announcements";
-import { useState } from 'react';
-
+import { useState } from "react";
+import ClassPage from "../class-page/ClassPage";
 
 function Content({ page }) {
 	const [card, setCard] = useState("Classes");
-  
-  	const childToParent = (childdata) => {
-    	setCard(childdata);
-  	}
 
-
+	const childToParent = (childdata) => {
+		setCard(childdata);
+	};
 
 	if (page === "Classes") {
-		if (card === page){
+		if (card === page) {
 			return (
 				<div className="content-main">
 					<div className="class-card-container">
-						<Card childToParent={childToParent} course={"CS5101"} title={"Automata"} upcoming={"HW1"}></Card>
-						<Card childToParent={childToParent} course={"CS5125"} title={"UI"} upcoming={"Quiz 3"}></Card>
-						<Card childToParent={childToParent} course={"CS6007"} title={"Requirements Engineering"} upcoming={"Quiz 4"}></Card>
+						<Card
+							childToParent={childToParent}
+							course={"CS5101"}
+							title={"Automata"}
+							upcoming={"HW1"}
+						></Card>
+						<Card
+							childToParent={childToParent}
+							course={"CS5125"}
+							title={"UI"}
+							upcoming={"Quiz 3"}
+						></Card>
+						<Card
+							childToParent={childToParent}
+							course={"CS6007"}
+							title={"Requirements Engineering"}
+							upcoming={"Quiz 4"}
+						></Card>
 					</div>
 				</div>
 			);
-		}
-		else if (card === "CS5101"){
+		} else if (card === "CS5101") {
 			return (
 				<div className="content-main">
-					<div className="class-card-container">
-						<Card childToParent={childToParent} course={"CS5101"} title={"Automata"} upcoming={"HW1"}></Card>
-					</div>
+					<ClassPage
+						childToParent={childToParent}
+						course={"CS5101"}
+					></ClassPage>
 				</div>
 			);
-		}
-		else if (card === "CS5125"){
+		} else if (card === "CS5125") {
 			return (
 				<div className="content-main">
-					<div className="class-card-container">
-						<Card childToParent={childToParent} course={"CS5125"} title={"UI"} upcoming={"Quiz 3"}></Card>
-					</div>
+					<ClassPage
+						childToParent={childToParent}
+						course={"CS5125"}
+					></ClassPage>
 				</div>
 			);
-		}
-		else if (card === "CS6007"){
+		} else if (card === "CS6007") {
 			return (
 				<div className="content-main">
-					<div className="class-card-container">
-						<Card childToParent={childToParent} course={"CS6007"} title={"Requirements Engineering"} upcoming={"Quiz 4"}></Card>
-					</div>
+					<ClassPage
+						childToParent={childToParent}
+						course={"CS6007"}
+					></ClassPage>
 				</div>
 			);
-		}
-		else{
+		} else {
 			return (
 				<div className="content-main">
 					<div className="class-card-container">
@@ -63,16 +75,13 @@ function Content({ page }) {
 				</div>
 			);
 		}
-		
-	}
-	else if (page === "Shop") {
+	} else if (page === "Shop") {
 		return (
 			<div className="content-main">
 				<Shop childToParent={childToParent}></Shop>
 			</div>
 		);
-	} 
-	else if (page === "Leaderboard") {
+	} else if (page === "Leaderboard") {
 		return (
 			<div className="content-main">
 				<Leaderboard
@@ -85,18 +94,14 @@ function Content({ page }) {
 				></Leaderboard>
 			</div>
 		);
-	}
-	else if (page === "Announcements") {
+	} else if (page === "Announcements") {
 		return (
 			<div className="content-main">
 				<Announcements childToParent={childToParent}></Announcements>
 			</div>
 		);
-	}
-	else{
-		return(
-			<p>problemo in content.jsx page</p>
-		)
+	} else {
+		return <p>problemo in content.jsx page</p>;
 	}
 }
 

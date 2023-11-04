@@ -1,9 +1,9 @@
 import "./ClassPage.scss";
 
-function ClassPage() {
+function ClassPage({ childToParent, course }) {
 	return (
 		<div className="class-page-main">
-			<p>class page</p>
+			<p>{course} placeholder</p>
 		</div>
 	);
 }
