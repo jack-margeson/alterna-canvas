@@ -22,6 +22,8 @@ a {
 }
 
 .sidebar-container {
+	max-width: 13vw;
+	min-width: 13wv;
 	display: flex;
 	flex-direction: column;
 	flex-grow: 1;
@@ -40,24 +42,30 @@ a {
 }
 
 .body-container {
+	max-width: 87vw;
+	min-width: 87vw;
 	display: flex;
 	flex-direction: column;
 	flex-grow: 28;
 }
 
 .titlebar-container {
+	max-height: 10vh;
 	display: flex;
 	flex-grow: 1;
 	background-color: antiquewhite;
 }
 
 .content-container {
+	max-height: 86vh;
 	display: flex;
 	background-color: lightgrey;
 	flex-grow: 10;
 }
 
 .global-footer-container {
+	min-height: 4vh;
+	max-height: 4vh;
 	display: flex;
 	flex-grow: 1;
 	background-color: lightblue;
