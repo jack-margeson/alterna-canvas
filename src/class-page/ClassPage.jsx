@@ -4,7 +4,6 @@ import { Button, Dialog } from "@mui/material";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import GradingIcon from "@mui/icons-material/Grading";
 import RecordVoiceOverIcon from "@mui/icons-material/RecordVoiceOver";
-import { Height } from "@mui/icons-material";
 
 function ClassPage({ childToParent, course }) {
 	const [open, setOpen] = React.useState(false);
