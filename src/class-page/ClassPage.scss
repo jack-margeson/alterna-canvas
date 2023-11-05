@@ -1,4 +1,33 @@
+.class-page-buttons {
+	max-height: 10%;
+	min-width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.class-page-buttons-left {
+	justify-self: left;
+}
+
+.class-page-buttons-right {
+	justify-self: right;
+}
+.class-page-buttons-right > Button {
+	margin-left: 10px;
+}
+
 .class-page-main {
-	max-height: 100%;
-	overflow-y: auto;
+	max-height: 90%;
+	overflow-y: scroll;
+	padding-top: 20px;
+}
+
+.class-page-container {
+	padding: 25px;
+}
+
+.class-page-grades-dialog {
+	height: 80vh;
+	padding: 25px;
 }

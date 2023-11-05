@@ -20,49 +20,49 @@ function Content({ page }) {
 					<div className="class-card-container">
 						<Card
 							childToParent={childToParent}
-							course={"CS5101"}
-							title={"Automata"}
+							course={"CS5160"}
+							title={"Computer Graphics I"}
 							upcoming={"HW1"}
 						></Card>
 						<Card
 							childToParent={childToParent}
-							course={"CS5125"}
-							title={"UI"}
+							course={"CS5001"}
+							title={"CS Senior Design I"}
 							upcoming={"Quiz 3"}
 						></Card>
 						<Card
 							childToParent={childToParent}
-							course={"CS6007"}
-							title={"Requirements Engineering"}
+							course={"CS5167"}
+							title={"User Interface I"}
 							upcoming={"Quiz 4"}
 						></Card>
 					</div>
 				</div>
 			);
-		} else if (card === "CS5101") {
+		} else if (card === "CS5160") {
 			return (
 				<div className="content-main">
 					<ClassPage
 						childToParent={childToParent}
-						course={"CS5101"}
+						course={"CS5160"}
 					></ClassPage>
 				</div>
 			);
-		} else if (card === "CS5125") {
+		} else if (card === "CS5001") {
 			return (
 				<div className="content-main">
 					<ClassPage
 						childToParent={childToParent}
-						course={"CS5125"}
+						course={"CS5001"}
 					></ClassPage>
 				</div>
 			);
-		} else if (card === "CS6007") {
+		} else if (card === "CS5167") {
 			return (
 				<div className="content-main">
 					<ClassPage
 						childToParent={childToParent}
-						course={"CS6007"}
+						course={"CS5167"}
 					></ClassPage>
 				</div>
 			);
