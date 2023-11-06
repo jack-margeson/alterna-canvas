@@ -22,19 +22,22 @@ function Content({ page }) {
 							childToParent={childToParent}
 							course={"CS5160"}
 							title={"Computer Graphics I"}
-							upcoming={"HW1"}
+							upcoming={["HW1", "Project Submission",]}
+							notificationsCount={2}
 						></Card>
 						<Card
 							childToParent={childToParent}
 							course={"CS5001"}
 							title={"CS Senior Design I"}
-							upcoming={"Quiz 3"}
+							upcoming={["Quiz 3", "Reading Assignment"]}
+							notificationsCount={4}
 						></Card>
 						<Card
 							childToParent={childToParent}
 							course={"CS5167"}
 							title={"User Interface I"}
-							upcoming={"Quiz 4"}
+							upcoming={["Quiz 4", "Discussion Post"]}
+							notificationsCount={1}
 						></Card>
 					</div>
 				</div>
