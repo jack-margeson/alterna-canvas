@@ -108,7 +108,7 @@ function Content({ page }) {
 	else if (page === "Todo") {
 		return (
 			<div className="content-main">
-				<Todo childToParent={childToParent}></Todo>
+				<ToDo childToParent={childToParent}></ToDo>
 			</div>
 		);
 	}
