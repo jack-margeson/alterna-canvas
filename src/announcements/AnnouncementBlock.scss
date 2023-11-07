@@ -1,0 +1,37 @@
+.viewedannouncementblockcontainer{
+    display: flex;
+    background-color: white;
+    width: 77%;
+    flex-direction: column;
+    margin-top: 10px;
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 5px;
+}
+
+.unviewedannouncementblockcontainer{
+    display: list-item;
+    background-color: white;
+    width: 77%;
+    flex-direction: column;
+    margin-top: 10px;
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 5px;
+}
+
+.classnumber{
+    font-size: 16px;
+    color: black;
+    display: flex;
+    width: 100%;
+    padding: 2px;
+}
+
+.announcement{
+    font-size: 14px;
+    color: black;
+    display: flex;
+    width: 100%;
+    padding: 2px;
+}
