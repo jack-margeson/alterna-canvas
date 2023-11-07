@@ -103,7 +103,15 @@ function Content({ page }) {
 				<Announcements childToParent={childToParent}></Announcements>
 			</div>
 		);
-	} else {
+	}
+	else if (page === "Todo") {
+		return (
+			<div className="content-main">
+				<Todo childToParent={childToParent}></Todo>
+			</div>
+		);
+	}
+	else {
 		return <p>problemo in content.jsx page</p>;
 	}
 }

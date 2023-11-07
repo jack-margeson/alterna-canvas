@@ -1,4 +1,4 @@
-import "./AnnouncementBlock.css"
+import "./AnnouncementBlock.scss"
 
 function AnnouncementBlock ({classnum, announcement, viewed}){
     if(viewed==="yes"){
