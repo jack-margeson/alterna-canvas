@@ -5,6 +5,7 @@ import Card from "../class-card/ClassCard";
 import Announcements from "../announcements/Announcements";
 import { useState } from "react";
 import ClassPage from "../class-page/ClassPage";
+import ToDo from "../todo/ToDo";
 
 function Content({ page }) {
 	const [card, setCard] = useState("Classes");
