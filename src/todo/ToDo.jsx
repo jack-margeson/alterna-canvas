@@ -17,4 +17,4 @@ function ToDo({childToParent}) {
 	);
 }
 
-export default Todo;
+export default ToDo;
