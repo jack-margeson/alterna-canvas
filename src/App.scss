@@ -1,3 +1,5 @@
+@import "Colorscheme.scss";
+
 .main {
 	max-width: 100vw;
 	min-width: 100vw;
@@ -5,7 +7,7 @@
 	min-height: 100vh;
 
 	overflow: hidden;
-	background-color: grey;
+	background-color: $antiflash-white;
 
 	display: flex;
 	flex-direction: column;
@@ -32,13 +34,15 @@ a {
 .profile-container {
 	display: flex;
 	flex-grow: 1;
-	background-color: lightgreen;
+	background-color: $midnight-green;
+	color: $antiflash-white;
+	border-bottom: 5px solid $night;
+
 }
 
 .navigation-container {
 	display: flex;
-	flex-grow: 4;
-	background-color: lightcoral;
+	flex-grow: 8;
 }
 
 .body-container {
@@ -53,13 +57,13 @@ a {
 	max-height: 10vh;
 	display: flex;
 	flex-grow: 1;
-	background-color: antiquewhite;
+	border-bottom: 5px solid $night;
 }
 
 .content-container {
 	max-height: 86vh;
 	display: flex;
-	background-color: lightgrey;
+	background-color: $antiflash-white;
 	flex-grow: 10;
 }
 
@@ -68,7 +72,9 @@ a {
 	max-height: 4vh;
 	display: flex;
 	flex-grow: 1;
-	background-color: lightblue;
+	background-color: $non-photo-blue;
+	border-top: medium solid $night;
+	color: $night;
 	align-items: center;
 	justify-content: center;
 }

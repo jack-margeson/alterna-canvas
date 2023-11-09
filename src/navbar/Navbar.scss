@@ -1,16 +1,19 @@
+@import "../Colorscheme.scss";
+
 .navbar-main {
 	max-width: 100%;
 	min-width: 100%;
 	max-height: 100%;
 	min-height: 100%;
-	background-color: #E00122;
+	padding-top: 10px;
+	background-color: $caribbean-current;
 }
 
 .navbar-button {
 	border: none;
 	background-color: transparent;
 	color: white;
-	font-size: 15px;
+	font-size: 18px;
 	padding-top: 10px;
 	padding-bottom: 10px;
 	width: 100%;
@@ -19,8 +22,8 @@
 .navbar-button:hover {
 	border: none;
 	background-color: transparent;
-	color: rgb(231, 231, 231);
-	font-size: 16px;
+	color: $non-photo-blue;
+	font-size: 19px;
 	padding-top: 10px;
 	padding-bottom: 10px;
 	width: 100%;
@@ -29,8 +32,10 @@
 .navbar-button-active {
 	border: none;
 	background-color: transparent;
-	color: black;
-	font-size: 15px;
+	color: $midnight-green;
+	font-weight: 800;
+	text-decoration: underline;
+	font-size: 18px;
 	padding-top: 10px;
 	padding-bottom: 10px;
 	width: 100%;
