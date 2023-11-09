@@ -8,15 +8,15 @@ import NotificationsIcon from '@mui/icons-material/Notifications';
 import Badge from '@mui/material/Badge';
 
 
-function ClassCard ({childToParent, course, title, upcoming, notificationsCount}){
+function ClassCard({ childToParent, course, title, upcoming, notificationsCount }) {
     const cardSelected = () => {
         childToParent(course);
     }
 
-    return(
-        <Card className="card-container" sx={{ minWidth: 275 }}>
+    return (
+        <Card className="card-container" sx={{ minWidth: 450 }}>
             <CardContent className="card-content">
-                <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
+                <Typography sx={{ fontSize: 16, fontWeight: 800 }} color="text.secondary" gutterBottom>
                     {course}
                 </Typography>
                 <Typography variant="h5" component="div">
@@ -25,19 +25,19 @@ function ClassCard ({childToParent, course, title, upcoming, notificationsCount}
                 <Typography sx={{ mb: 1.5 }} color="text.secondary">
                     Undergraduate
                 </Typography>
-                <Typography sx={{ textDecoration: 'underline' }} variant="body2">
-                   Assignments Due
+                <Typography sx={{ textDecoration: 'underline', fontSize: 16 }} variant="body2">
+                    Assignments Due:
                 </Typography>
                 {Array.isArray(upcoming) && upcoming.map((item, index) => (
                     <TodoItem key={index} text={item} />
                 ))}
-      
-            
+
+
             </CardContent>
             <CardActions>
-                <Button size="small" onClick={cardSelected}>Go to Class Page</Button>
+                <Button variant="contained" size="small" sx={{ fontSize: 16, marginLeft: 1, marginBottom: 1 }} onClick={cardSelected}>Go to Class Page</Button>
                 <Badge badgeContent={notificationsCount} color="primary">
-                    <NotificationsIcon sx={{ marginLeft: theme => theme.spacing(1) }} />
+                    <NotificationsIcon sx={{ marginLeft: theme => theme.spacing(28) }} />
                 </Badge>
             </CardActions>
         </Card>

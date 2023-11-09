@@ -7,15 +7,17 @@ function TodoItem({ text }) {
 
   useEffect(() => {
     setIsCompleted(false);
-  }, [text]); 
+  }, [text]);
   const toggleCompletion = () => {
     setIsCompleted(!isCompleted);
   };
 
+
+
   return (
     <div style={{ display: 'flex', alignItems: 'center' }}>
       <Checkbox sx={{ mr: 2 }} checked={isCompleted} onChange={toggleCompletion} />
-      <Typography variant="body2" style={{ textDecoration: isCompleted ? 'line-through' : 'none' }}>
+      <Typography variant="body2" style={{ fontSize: 18, textDecoration: isCompleted ? 'line-through' : 'none' }}>
         {text}
       </Typography>
     </div>
