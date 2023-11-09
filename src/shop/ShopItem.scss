@@ -2,8 +2,8 @@
 
 .shop-button{
     font-size: 18px;
-    color: $night;
-    background-color: $non-photo-blue;
+    color: $antiflash-white;
+    background-color: $midnight-green;
     border: none;
     display: inline;
     margin-left: 30px;
@@ -15,8 +15,8 @@
 
 .shop-button:hover{
     font-size: 19px;
-    color: $night;
-    background-color: $non-photo-blue;
+    color: $antiflash-white;
+    background-color: $midnight-green;
 
     border: none;
     display: inline;
@@ -30,8 +30,8 @@
 
 .shop-button-active{
     font-size: 18px;
-    color: $antiflash-white;
-    background-color: $midnight-green;
+    color: $night;
+    background-color: $non-photo-blue;
 
     border: none;
     display: inline;
@@ -45,8 +45,8 @@
 
 .shop-button-active:hover{
     font-size: 19px;
-    color: $antiflash-white;
-    background-color: $midnight-green;
+    color: $night;
+    background-color: $non-photo-blue;
 
     border: none;
     display: inline;
@@ -60,7 +60,7 @@
 
 .shop-description{
     font-size: 18px;
-    color: black;
+    color: $antiflash-white;
     background-color: transparent;
     display: inline;
     margin-left: 30px;

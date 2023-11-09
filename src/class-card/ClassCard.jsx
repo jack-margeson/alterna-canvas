@@ -14,15 +14,15 @@ function ClassCard({ childToParent, course, title, upcoming, notificationsCount 
     }
 
     return (
-        <Card className="card-container" sx={{ minWidth: 450 }}>
+        <Card className="card-container" sx={{ border: "1px solid #dedbd6", color: "#f0edeeff", backgroundColor: "#181a1b", minWidth: 450, borderRadius: 2 }}>
             <CardContent className="card-content">
-                <Typography sx={{ fontSize: 16, fontWeight: 800 }} color="text.secondary" gutterBottom>
+                <Typography sx={{ fontSize: 16, fontWeight: 800 }} gutterBottom>
                     {course}
                 </Typography>
                 <Typography variant="h5" component="div">
                     {title}
                 </Typography>
-                <Typography sx={{ mb: 1.5 }} color="text.secondary">
+                <Typography sx={{ mb: 1.5 }} >
                     Undergraduate
                 </Typography>
                 <Typography sx={{ textDecoration: 'underline', fontSize: 16 }} variant="body2">

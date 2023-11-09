@@ -2,29 +2,40 @@
 
 .viewedannouncementblockcontainer{
     display: flex;
-    background-color: $antiflash-white;
+    background-color: $night;
     width: 77%;
     flex-direction: column;
     margin-top: 10px;
+    border-color: $antiflash-white;
     border-style: solid;
     border-width: 2px;
     border-radius: 5px;
 }
 
 .unviewedannouncementblockcontainer{
-    display: list-item;
-    background-color: white;
+    display: flex;
+    background-color: $night;
     width: 77%;
     flex-direction: column;
     margin-top: 10px;
     border-style: solid;
+    border-color: $antiflash-white;
     border-width: 2px;
     border-radius: 5px;
 }
 
+.unviewedannouncementblockcontainer > .classnumber::before {
+    content: "!";  /* Add content: \2022 is the CSS Code/unicode for a bullet */
+    color: $non-photo-blue; 
+    font-weight: bold; 
+    display: inline-block; 
+    width: 1em; 
+    margin-left: -1em;
+}
+
 .classnumber{
     font-size: 18px;
-    color: black;
+    color: $antiflash-white;
     display: flex;
     width: 100%;
     padding: 2px;
@@ -32,7 +43,7 @@
 
 .announcement{
     font-size: 16px;
-    color: black;
+    color: $antiflash-white;
     display: flex;
     width: 100%;
     padding: 2px;

@@ -16,8 +16,8 @@ function TodoItem({ text }) {
 
   return (
     <div style={{ display: 'flex', alignItems: 'center' }}>
-      <Checkbox sx={{ mr: 2 }} checked={isCompleted} onChange={toggleCompletion} />
-      <Typography variant="body2" style={{ fontSize: 18, textDecoration: isCompleted ? 'line-through' : 'none' }}>
+      <Checkbox sx={{ color: "#dedbd6", mr: 2 }} checked={isCompleted} onChange={toggleCompletion} />
+      <Typography variant="body2" style={{ color: "#dedbd6", fontSize: 18, textDecoration: isCompleted ? 'line-through' : 'none' }}>
         {text}
       </Typography>
     </div>
