@@ -6,6 +6,7 @@ import Announcements from "../announcements/Announcements";
 import ProfilePage from "../profile-page/profile-page";
 import { useState } from "react";
 import ClassPage from "../class-page/ClassPage";
+import ToDo from "../todo/ToDo";
 
 function Content({ page }) {
 	const [card, setCard] = useState("Classes");
@@ -23,19 +24,22 @@ function Content({ page }) {
 							childToParent={childToParent}
 							course={"CS5160"}
 							title={"Computer Graphics I"}
-							upcoming={"HW1"}
+							upcoming={["HW1", "Project Submission",]}
+							notificationsCount={2}
 						></Card>
 						<Card
 							childToParent={childToParent}
 							course={"CS5001"}
 							title={"CS Senior Design I"}
-							upcoming={"Quiz 3"}
+							upcoming={["Quiz 3", "Reading Assignment"]}
+							notificationsCount={4}
 						></Card>
 						<Card
 							childToParent={childToParent}
 							course={"CS5167"}
 							title={"User Interface I"}
-							upcoming={"Quiz 4"}
+							upcoming={["Quiz 4", "Discussion Post"]}
+							notificationsCount={1}
 						></Card>
 					</div>
 				</div>
@@ -109,7 +113,15 @@ function Content({ page }) {
 			</div>
 		);
 		
-	}else {
+	}
+	else if (page === "Todo") {
+		return (
+			<div className="content-main">
+				<ToDo childToParent={childToParent}></ToDo>
+			</div>
+		);
+	}
+	else {
 		return <p>problemo in content.jsx page</p>;
 	}
 }
