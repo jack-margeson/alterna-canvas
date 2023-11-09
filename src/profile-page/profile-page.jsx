@@ -4,15 +4,15 @@ import NativeSelect from '@mui/material/NativeSelect';
 import FormControl from '@mui/material/FormControl';
 import InputLabel from '@mui/material/InputLabel';
 
-function ProfilePage({childToParent}) {
+function ProfilePage({ childToParent }) {
     childToParent("Classes");
-    
-    const userAlex = () =>{
+
+    const userAlex = () => {
         document.getElementById("profile-avatar").textContent = "AY"
     }
     const userKody = () => {
         document.getElementById("profile-avatar").textContent = "KP"
-        
+
     }
     const userJack = () => {
         document.getElementById("profile-avatar").textContent = "JM"
@@ -20,18 +20,22 @@ function ProfilePage({childToParent}) {
     const userAl = () => {
         document.getElementById("profile-avatar").textContent = "AA"
     }
-	return(
+    return (
         <div>
             <FormControl style={{
                 width: "90%",
-                margin: "10px"
-            }}>
-                <InputLabel variant="standard">
-                User
+                margin: "10px",
+                color: "#dedbd6",
+            }}
+                sx={{ color: "#dedbd6" }}>
+                <InputLabel variant="standard" sx={{ color: "#dedbd6" }}>
+                    User
                 </InputLabel>
                 <NativeSelect
                     id="user"
                     defaultValue={"Alex Yang"}
+                    style={{ color: "#dedbd6" }}
+                    color="primary"
                     onChange={(event) => {
                         const selectedValue = event.target.value;
                         if (selectedValue === "Alex Yang") {
@@ -44,13 +48,13 @@ function ProfilePage({childToParent}) {
                             userAl();
                         }
                     }}>
-                    <option value={"Alex Yang"}>Alex Yang</option>
-                    <option value={"Kody Penn"}>Kody Penn</option>
-                    <option value={"Jack Margeson"}>Jack Margeson</option>
-                    <option value={"Al Ayoola"}>Al Ayoola</option>
+                    <option value={"Alex Yang"} style={{ color: "#181a1b" }}>Alex Yang</option>
+                    <option value={"Kody Penn"} style={{ color: "#181a1b" }}>Kody Penn</option>
+                    <option value={"Jack Margeson"} style={{ color: "#181a1b" }}>Jack Margeson</option>
+                    <option value={"Al Ayoola"} style={{ color: "#181a1b" }}>Al Ayoola</option>
                 </NativeSelect>
             </FormControl>
-        </div>
+        </div >
     );
 }
 

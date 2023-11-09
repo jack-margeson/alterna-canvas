@@ -1,17 +1,14 @@
+@import "../Colorscheme.scss";
+
 .class-page-buttons {
 	max-height: 10%;
 	min-width: 100%;
 	display: flex;
 	align-items: center;
+	justify-content: space-between;
+	
 }
 
-.class-page-buttons-left {
-	justify-self: left;
-}
-
-.class-page-buttons-right {
-	justify-self: right;
-}
 .class-page-buttons-right > Button {
 	margin-left: 10px;
 }
@@ -19,7 +16,8 @@
 .class-page-main {
 	max-height: 90%;
 	overflow-y: scroll;
-	padding-top: 20px;
+	padding-top: 30px;
+	color: $antiflash-white;
 }
 
 .class-page-container {
@@ -29,4 +27,7 @@
 .class-page-grades-dialog {
 	height: 80vh;
 	padding: 25px;
+	background-color: $night;
+	border: 2px solid $antiflash-white;
+	color: $antiflash-white;
 }

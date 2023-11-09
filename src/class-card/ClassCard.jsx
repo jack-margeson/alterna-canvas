@@ -14,7 +14,7 @@ function ClassCard({ childToParent, course, title, upcoming, notificationsCount 
     }
 
     return (
-        <Card className="card-container" sx={{ border: "1px solid #dedbd6", color: "#f0edeeff", backgroundColor: "#181a1b", minWidth: 450, borderRadius: 2 }}>
+        <Card className="card-container" sx={{ border: "1px solid #dedbd6", color: "#f0edeeff", backgroundColor: "#181a1b", minWidth: 450, borderRadius: 1 }}>
             <CardContent className="card-content">
                 <Typography sx={{ fontSize: 16, fontWeight: 800 }} gutterBottom>
                     {course}
