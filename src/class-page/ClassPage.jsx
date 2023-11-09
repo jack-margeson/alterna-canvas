@@ -16,6 +16,10 @@ function ClassPage({ childToParent, course }) {
 		setOpen(false);
 	};
 
+	const redirectToZoom = () => {
+		window.open('https://zoom.us/', "_blank", "noreferrer")
+	};
+
 	let class_display = { id: course };
 	switch (course) {
 		case "CS5160":
@@ -53,7 +57,7 @@ function ClassPage({ childToParent, course }) {
 					>
 						View Grades
 					</Button>
-					<Button variant="contained" startIcon={<RecordVoiceOverIcon />}>
+					<Button variant="contained" startIcon={<RecordVoiceOverIcon />} onClick = {redirectToZoom}>
 						Launch Zoom
 					</Button>
 				</div>

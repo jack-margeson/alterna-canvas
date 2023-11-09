@@ -3,6 +3,7 @@ import Shop from "../shop/Shop";
 import Leaderboard from "../leaderboard/Leaderboard";
 import Card from "../class-card/ClassCard";
 import Announcements from "../announcements/Announcements";
+import ProfilePage from "../profile-page/profile-page";
 import { useState } from "react";
 import ClassPage from "../class-page/ClassPage";
 
@@ -100,7 +101,15 @@ function Content({ page }) {
 				<Announcements childToParent={childToParent}></Announcements>
 			</div>
 		);
-	} else {
+		
+	} else if (page === "Profile") {
+		return(
+			<div className="content-main">
+				<ProfilePage childToParent={childToParent}></ProfilePage>
+			</div>
+		);
+		
+	}else {
 		return <p>problemo in content.jsx page</p>;
 	}
 }

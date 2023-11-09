@@ -20,7 +20,7 @@ function App() {
 			<div className="display-container">
 				<div className="sidebar-container">
 					<div className="profile-container">
-						<Profile></Profile>
+						<Profile childToParent = {childToParent}></Profile>
 					</div>
 					<div className="navigation-container">
 						<Navbar childToParent={childToParent}></Navbar>
