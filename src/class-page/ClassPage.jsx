@@ -50,32 +50,6 @@ function ClassPage({ childToParent, course }) {
 			break;
 	}
 
-	let accordionDetailsContent;
-	switch (course) {
-	  case "CS5160":
-		accordionDetailsContent = (
-		  <Typography>
-			Content specific to CS5160 - Syllabus. You can include links, buttons, etc.
-		  </Typography>
-		);
-		break;
-	  case "CS5001":
-		accordionDetailsContent = (
-		  <Typography>
-			Content specific to CS5001 - Assignments.
-		  </Typography>
-		);
-		break;
-	  case "CS5167":
-		accordionDetailsContent = (
-		  <Typography>
-			Content specific to CS5167 - Course Materials.
-		  </Typography>
-		);
-		break;
-	  default:
-		break;
-	}
 
 	console.log(class_display);
 
