@@ -35,6 +35,10 @@ function ClassPage({ childToParent, course }) {
 		window.open('https://zoom.us/', "_blank", "noreferrer")
 	};
 
+	const backSelected = () => {
+        childToParent("Classes");
+    }
+
 	let class_display = { id: course };
 	switch (course) {
 		case "CS5160":
@@ -63,7 +67,7 @@ function ClassPage({ childToParent, course }) {
 					<Button
 						variant="contained"
 						startIcon={<ArrowBackIcon />}
-						onClick={null}
+						onClick={backSelected}
 					>
 						All Classes
 					</Button>
