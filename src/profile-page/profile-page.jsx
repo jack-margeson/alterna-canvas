@@ -1,5 +1,4 @@
 import "./profile-page.scss";
-import * as React from 'react';
 import NativeSelect from '@mui/material/NativeSelect';
 import FormControl from '@mui/material/FormControl';
 import InputLabel from '@mui/material/InputLabel';
@@ -9,16 +8,22 @@ function ProfilePage({ childToParent }) {
 
     const userAlex = () => {
         document.getElementById("profile-avatar").textContent = "AY"
+        document.getElementById("points").textContent = "2021"
     }
     const userKody = () => {
         document.getElementById("profile-avatar").textContent = "KP"
+        document.getElementById("points").textContent = "2400"
 
     }
     const userJack = () => {
         document.getElementById("profile-avatar").textContent = "JM"
+
+        document.getElementById("points").textContent = "2373"
     }
     const userAl = () => {
         document.getElementById("profile-avatar").textContent = "AA"
+
+        document.getElementById("points").textContent = "2000"
     }
     return (
         <div>

@@ -3,6 +3,7 @@ import Avatar from '@mui/material/Avatar';
 
 
 function Profile({childToParent}) {
+
 	const ProfileSelected = () => {
 		childToParent("Profile");
 	}
@@ -30,12 +31,14 @@ function Profile({childToParent}) {
 					justifyContent: "center",
 					marginTop: "20px"
 				}}>
-				<p
+				<div
 					style={{
-						fontSize: "1.5em"
+						fontSize: "1.5em",
+						display: "inline-flex"
 					}}>
-					1000 pts
-				</p>
+					Points:&nbsp; <div id="points"> 2021</div>
+				</div>
+				
 			</div>
 		</div>
 	);
