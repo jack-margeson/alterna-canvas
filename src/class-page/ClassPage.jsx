@@ -39,6 +39,31 @@ function ClassPage({ childToParent, course }) {
 		false,
 	]);
 
+	const [currAdditionalInformation, setCurrAdditionalInformation] =
+		React.useState([-1]);
+
+	const additionalInformation = [
+		<p>0</p>,
+		<p>1</p>,
+		<p>2</p>,
+		<SeniorDesignHW1></SeniorDesignHW1>,
+		<ComputerGraphicsHW4></ComputerGraphicsHW4>,
+		<UIHW5></UIHW5>,
+		<p>6</p>,
+		<p>7</p>,
+		<p>8</p>,
+		<SeniorDesignSyllabus></SeniorDesignSyllabus>,
+		<ComputerGraphicsSyllabus></ComputerGraphicsSyllabus>,
+		<UISyllabus></UISyllabus>,
+		<p>12</p>,
+		<p>13</p>,
+		<p>14</p>,
+		<p>15</p>,
+		<p>16</p>,
+		<p>17</p>,
+		<p>18</p>,
+	];
+
 	const toggleAccordion = (index, expanded) => {
 		let temp = [false, false, false, false, false];
 		if (expanded === true) {
@@ -59,6 +84,7 @@ function ClassPage({ childToParent, course }) {
 
 	const handleContentClickOpen = (e, value) => {
 		console.log(value);
+		setCurrAdditionalInformation(value);
 		setOpenContentDialog(true);
 	};
 
@@ -88,8 +114,6 @@ function ClassPage({ childToParent, course }) {
 		default:
 			break;
 	}
-
-	console.log(class_display);
 
 	return (
 		<div className="class-page-container">
@@ -166,7 +190,7 @@ function ClassPage({ childToParent, course }) {
 											</Avatar>
 										</ListItemAvatar>
 										<ListItemButton
-											onClick={(event) => handleContentClickOpen(event, 2)}
+											onClick={(event) => handleContentClickOpen(event, 0)}
 										>
 											<ListItemText
 												primary="Project advisor deadline"
@@ -203,7 +227,7 @@ function ClassPage({ childToParent, course }) {
 											</Avatar>
 										</ListItemAvatar>
 										<ListItemButton
-											onClick={(event) => handleContentClickOpen(event, 2)}
+											onClick={(event) => handleContentClickOpen(event, 1)}
 										>
 											<ListItemText
 												primary="Bring your laptop to next class"
@@ -289,7 +313,7 @@ function ClassPage({ childToParent, course }) {
 											</Avatar>
 										</ListItemAvatar>
 										<ListItemButton
-											onClick={(event) => handleContentClickOpen(event, 2)}
+											onClick={(event) => handleContentClickOpen(event, 3)}
 										>
 											<ListItemText
 												primary="Project Proposal"
@@ -326,7 +350,7 @@ function ClassPage({ childToParent, course }) {
 											</Avatar>
 										</ListItemAvatar>
 										<ListItemButton
-											onClick={(event) => handleContentClickOpen(event, 2)}
+											onClick={(event) => handleContentClickOpen(event, 4)}
 										>
 											<ListItemText
 												primary="HW 4a"
@@ -363,7 +387,7 @@ function ClassPage({ childToParent, course }) {
 											</Avatar>
 										</ListItemAvatar>
 										<ListItemButton
-											onClick={(event) => handleContentClickOpen(event, 2)}
+											onClick={(event) => handleContentClickOpen(event, 5)}
 										>
 											<ListItemText
 												primary="HW 5"
@@ -414,7 +438,7 @@ function ClassPage({ childToParent, course }) {
 											</ListItemButton>
 										</a>
 										<ListItemButton
-											onClick={(event) => handleContentClickOpen(event, 2)}
+											onClick={(event) => handleContentClickOpen(event, 6)}
 										>
 											<ListItemText
 												primary="Senior Design Project Ideas"
@@ -451,7 +475,7 @@ function ClassPage({ childToParent, course }) {
 											</Avatar>
 										</ListItemAvatar>
 										<ListItemButton
-											onClick={(event) => handleContentClickOpen(event, 2)}
+											onClick={(event) => handleContentClickOpen(event, 7)}
 										>
 											<ListItemText
 												primary="Computer Graphics tutorial 1"
@@ -488,7 +512,7 @@ function ClassPage({ childToParent, course }) {
 											</Avatar>
 										</ListItemAvatar>
 										<ListItemButton
-											onClick={(event) => handleContentClickOpen(event, 2)}
+											onClick={(event) => handleContentClickOpen(event, 8)}
 										>
 											<ListItemText
 												primary="User Interface Powerpoint "
@@ -537,7 +561,7 @@ function ClassPage({ childToParent, course }) {
 											</Avatar>
 										</ListItemAvatar>
 										<ListItemButton
-											onClick={(event) => handleContentClickOpen(event, 2)}
+											onClick={(event) => handleContentClickOpen(event, 9)}
 										>
 											<ListItemText
 												primary="CS5001 Syllabus"
@@ -574,7 +598,7 @@ function ClassPage({ childToParent, course }) {
 											</Avatar>
 										</ListItemAvatar>
 										<ListItemButton
-											onClick={(event) => handleContentClickOpen(event, 2)}
+											onClick={(event) => handleContentClickOpen(event, 10)}
 										>
 											{" "}
 											<ListItemText
@@ -612,7 +636,7 @@ function ClassPage({ childToParent, course }) {
 											</Avatar>
 										</ListItemAvatar>
 										<ListItemButton
-											onClick={(event) => handleContentClickOpen(event, 2)}
+											onClick={(event) => handleContentClickOpen(event, 11)}
 										>
 											{" "}
 											<ListItemText
@@ -662,7 +686,7 @@ function ClassPage({ childToParent, course }) {
 											</Avatar>
 										</ListItemAvatar>
 										<ListItemButton
-											onClick={(event) => handleContentClickOpen(event, 2)}
+											onClick={(event) => handleContentClickOpen(event, 12)}
 										>
 											<ListItemText primary="Homework 1" secondary="97/100" />
 										</ListItemButton>
@@ -674,7 +698,7 @@ function ClassPage({ childToParent, course }) {
 											</Avatar>
 										</ListItemAvatar>
 										<ListItemButton
-											onClick={(event) => handleContentClickOpen(event, 2)}
+											onClick={(event) => handleContentClickOpen(event, 13)}
 										>
 											<ListItemText primary="Homework 2" secondary="99/100" />
 										</ListItemButton>
@@ -708,7 +732,7 @@ function ClassPage({ childToParent, course }) {
 											</Avatar>
 										</ListItemAvatar>
 										<ListItemButton
-											onClick={(event) => handleContentClickOpen(event, 2)}
+											onClick={(event) => handleContentClickOpen(event, 14)}
 										>
 											{" "}
 											<ListItemText primary="Homework 1" secondary="87/100" />
@@ -721,7 +745,7 @@ function ClassPage({ childToParent, course }) {
 											</Avatar>
 										</ListItemAvatar>
 										<ListItemButton
-											onClick={(event) => handleContentClickOpen(event, 2)}
+											onClick={(event) => handleContentClickOpen(event, 15)}
 										>
 											{" "}
 											<ListItemText primary="Quiz 1" secondary="9/10" />
@@ -734,7 +758,7 @@ function ClassPage({ childToParent, course }) {
 											</Avatar>
 										</ListItemAvatar>
 										<ListItemButton
-											onClick={(event) => handleContentClickOpen(event, 2)}
+											onClick={(event) => handleContentClickOpen(event, 16)}
 										>
 											{" "}
 											<ListItemText primary="Homework 2" secondary="45/50" />
@@ -769,7 +793,7 @@ function ClassPage({ childToParent, course }) {
 											</Avatar>
 										</ListItemAvatar>
 										<ListItemButton
-											onClick={(event) => handleContentClickOpen(event, 2)}
+											onClick={(event) => handleContentClickOpen(event, 17)}
 										>
 											{" "}
 											<ListItemText primary="Homework 1" secondary="100/100" />
@@ -782,7 +806,7 @@ function ClassPage({ childToParent, course }) {
 											</Avatar>
 										</ListItemAvatar>
 										<ListItemButton
-											onClick={(event) => handleContentClickOpen(event, 2)}
+											onClick={(event) => handleContentClickOpen(event, 18)}
 										>
 											{" "}
 											<ListItemText
@@ -815,10 +839,10 @@ function ClassPage({ childToParent, course }) {
 				maxWidth="md"
 				open={openContentDialog}
 				onClose={handleContentClose}
-				sx={{ minHeight: "80vh" }}
+				sx={{ minHeight: "80vh", backgroundColor: "#00000011" }}
 			>
 				<div className="class-page-grades-dialog">
-					<h4>Additional information</h4>
+					{additionalInformation[currAdditionalInformation]}
 				</div>
 			</Dialog>
 		</div>

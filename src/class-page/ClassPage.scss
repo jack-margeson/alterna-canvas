@@ -6,7 +6,6 @@
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	
 }
 
 .class-page-buttons-right > Button {
@@ -17,7 +16,6 @@
 	max-height: 90%;
 	padding-top: 30px;
 	color: $antiflash-white;
-	
 }
 
 .class-page-container {
@@ -25,7 +23,8 @@
 }
 
 .class-page-grades-dialog {
-	height: 80vh;
+	height: auto;
+
 	padding: 25px;
 	background-color: $night;
 	border: 2px solid $antiflash-white;
@@ -35,6 +34,4 @@
 .class-page-accordion {
 	background-color: $night;
 	overflow-y: scroll;
-
-
 }
