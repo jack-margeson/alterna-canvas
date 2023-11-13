@@ -481,8 +481,8 @@ function ClassPage({ childToParent, course }) {
 								>
 									<ListItem>
 										<a
-											href="Course-Material.txt"
-											download="Course-Material.txt"
+											href="https://github.com/jack-margeson/alterna-canvas/raw/main/src/course-data/senior_design/presentations/01.pptx"
+											download="Senior-Design-Project-Ideas"
 										>
 											<ListItemButton>
 												<Avatar>
@@ -522,11 +522,16 @@ function ClassPage({ childToParent, course }) {
 									}}
 								>
 									<ListItem>
-										<ListItemAvatar>
-											<Avatar>
-												<AssignmentIcon />
-											</Avatar>
-										</ListItemAvatar>
+										<a
+											href="https://github.com/jack-margeson/alterna-canvas/raw/main/src/course-data/computer_graphics/presentations/01-01.pptx"
+											download="Computer-Graphics-Tutorial-1"
+										>
+											<ListItemButton>
+												<Avatar>
+													<DownloadIcon />
+												</Avatar>
+											</ListItemButton>
+										</a>
 										<ListItemButton
 											onClick={(event) => handleContentClickOpen(event, 7)}
 										>
@@ -559,11 +564,16 @@ function ClassPage({ childToParent, course }) {
 									}}
 								>
 									<ListItem>
-										<ListItemAvatar>
-											<Avatar>
-												<AssignmentIcon />
-											</Avatar>
-										</ListItemAvatar>
+										<a
+											href="https://github.com/jack-margeson/alterna-canvas/raw/main/src/course-data/ui/presentations/01-01-intro.pptx"
+											download="User-Interface-Powerpoint"
+										>
+											<ListItemButton>
+												<Avatar>
+													<DownloadIcon />
+												</Avatar>
+											</ListItemButton>
+										</a>
 										<ListItemButton
 											onClick={(event) => handleContentClickOpen(event, 8)}
 										>
