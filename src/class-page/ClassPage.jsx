@@ -43,7 +43,7 @@ function ClassPage({ childToParent, course }) {
 
 	const handleDownload = () => {
 		const data = [""]
-		const file = new Blob([Data], {type: 'text/plain'});
+		const file = new Blob([data], {type: 'text/plain'});
 		const element = document.createElement("a");
 		element.href = URL.createObjectURL(file);
 		element.download = "Course-Material-" + Date.now() + ".txt";
