@@ -1,9 +1,26 @@
 /*https://codepen.io/coralielm/pen/BazQOXZ*/
 import "./Leaderboard.scss";
 
-function Leaderboard({childToParent, first, second, third, totalpts, rank}) {
+function Leaderboard({childToParent, first, second, third}) {
     childToParent("Classes");
-    
+    let points = document.getElementById("points").textContent;
+    let rank;
+    if (points === "2000"){
+        rank = "4th";
+    }
+    else if (points === "2373"){
+        rank = "2nd";
+    }
+    else if (points === "2400"){
+        rank = "1st";
+    }
+    else if (points === "2021"){
+        rank = "3rd";
+    }
+    else{
+        rank = "5th";
+    }
+
 	return (
         <div className="leaderboard-main">
             <div className="container podium">
@@ -21,7 +38,7 @@ function Leaderboard({childToParent, first, second, third, totalpts, rank}) {
                 </div>
             </div>
             <div className="text-area">
-                <p>Your cumulative points: {document.getElementById("points").textContent}</p>
+                <p>Your cumulative points: {points}</p>
                 <p>Your rank: {rank}</p>
             </div>
         </div>
