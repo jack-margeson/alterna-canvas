@@ -31,6 +31,8 @@ function ClassPage({ childToParent, course }) {
 
 	const [openContentDialog, setOpenContentDialog] = React.useState(false);
 
+	const [submitButtonStatus, setSubmitButtonStatus] = React.useState(true);
+
 	const [accValues, setAccValues] = React.useState([
 		false,
 		false,
@@ -62,6 +64,7 @@ function ClassPage({ childToParent, course }) {
 		<p>16</p>,
 		<p>17</p>,
 		<p>18</p>,
+		<p>	Your assignment has been submitted! Points have been added to your total.</p>
 	];
 
 	const toggleAccordion = (index, expanded) => {
@@ -83,7 +86,6 @@ function ClassPage({ childToParent, course }) {
 	};
 
 	const handleContentClickOpen = (e, value) => {
-		console.log(value);
 		setCurrAdditionalInformation(value);
 		setOpenContentDialog(true);
 	};
@@ -99,6 +101,24 @@ function ClassPage({ childToParent, course }) {
 	const backSelected = () => {
 		childToParent("Classes");
 	};
+
+	const fileInputted = (event) => {
+		setSubmitButtonStatus(false);
+	}
+
+	const handleSubmit = (event) => {
+		console.log(event);
+		setCurrAdditionalInformation(19);
+		setOpenContentDialog(true);
+		let currentPoints = document.getElementById("points").textContent;
+		document.getElementById("points").textContent = Number(currentPoints) + 200;
+		let tmpColor = document.getElementById("points").style.color;
+		document.getElementById("points").style.color = "green";
+		setTimeout(() => {
+			document.getElementById("points").style.color = tmpColor;
+		}, 3000);
+		setSubmitButtonStatus(true);
+	}
 
 	let gradesInformation = <p></p>;
 
@@ -330,7 +350,7 @@ function ClassPage({ childToParent, course }) {
 										bgcolor: "background.paper",
 									}}
 								>
-									<ListItem>
+									<ListItem sx={{ width: "32vw" }}>
 										<ListItemAvatar>
 											<Avatar>
 												<AssignmentIcon />
@@ -344,6 +364,8 @@ function ClassPage({ childToParent, course }) {
 												secondary="Due: Oct 14th 11:59pm"
 											/>
 										</ListItemButton>
+										<input type="file" onChange={fileInputted} />
+										<Button variant="contained" disabled={submitButtonStatus} onClick={handleSubmit}>Submit</Button>
 									</ListItem>
 								</List>
 							</>
@@ -367,7 +389,7 @@ function ClassPage({ childToParent, course }) {
 										bgcolor: "background.paper",
 									}}
 								>
-									<ListItem>
+									<ListItem sx={{ width: "32vw" }}>
 										<ListItemAvatar>
 											<Avatar>
 												<AssignmentIcon />
@@ -381,6 +403,8 @@ function ClassPage({ childToParent, course }) {
 												secondary="Due: Oct 14th 11:59pm"
 											/>
 										</ListItemButton>
+										<input type="file" onChange={fileInputted} />
+										<Button variant="contained" disabled={submitButtonStatus} onClick={handleSubmit}>Submit</Button>
 									</ListItem>
 								</List>
 							</>
@@ -404,7 +428,7 @@ function ClassPage({ childToParent, course }) {
 										bgcolor: "background.paper",
 									}}
 								>
-									<ListItem>
+									<ListItem sx={{ width: "32vw" }}>
 										<ListItemAvatar>
 											<Avatar>
 												<AssignmentIcon />
@@ -418,6 +442,8 @@ function ClassPage({ childToParent, course }) {
 												secondary="Due: Oct 14th 11:59pm"
 											/>
 										</ListItemButton>
+										<input type="file" onChange={fileInputted} />
+										<Button variant="contained" disabled={submitButtonStatus} onClick={handleSubmit}>Submit</Button>
 									</ListItem>
 								</List>
 							</>
