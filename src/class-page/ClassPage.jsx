@@ -18,6 +18,7 @@ import Avatar from "@mui/material/Avatar";
 import ListItemText from "@mui/material/ListItemText";
 import ListItemButton from "@mui/material/ListItemButton";
 import AnnouncementIcon from "@mui/icons-material/Announcement";
+import ProgressBar from "@ramonak/react-progress-bar";
 
 import ComputerGraphicsHW4 from "../course-data/computer_graphics/assignments/assignment_04";
 import ComputerGraphicsSyllabus from "../course-data/computer_graphics/course_info/computer_graphics_syllabus";
@@ -906,6 +907,25 @@ function ClassPage({ childToParent, course }) {
 					{additionalInformation[currAdditionalInformation]}
 				</div>
 			</Dialog>
+			{course === "CS5001" && (
+				<div style={{marginTop: "1em"}}>
+					<h2 style={{color: "white"}}>Course Progress:</h2>
+					<ProgressBar bgColor="blue" completed="45" />
+				</div>
+			)}
+			{course === "CS5160" && (
+				<div style={{marginTop: "1em"}}>
+					<h2 style={{color: "white"}}>Course Progress:</h2>
+					<ProgressBar bgColor="blue" completed="60" />
+				</div>
+			)}
+			{course === "CS5167" && (
+				<div style={{marginTop: "1em"}}>
+					<h2 style={{color: "white"}}>Course Progress:</h2>
+					<ProgressBar bgColor="blue" completed="65" />
+				</div>
+			)}
+			
 		</div>
 	);
 }
