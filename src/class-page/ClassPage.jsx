@@ -43,6 +43,8 @@ function ClassPage({ childToParent, course }) {
 
 	const [openContentDialog, setOpenContentDialog] = React.useState(false);
 
+	const [submitButtonStatus, setSubmitButtonStatus] = React.useState(true);
+
 	const [accValues, setAccValues] = React.useState([
 		false,
 		false,
@@ -67,13 +69,13 @@ function ClassPage({ childToParent, course }) {
 		<SeniorDesignSyllabus></SeniorDesignSyllabus>,
 		<ComputerGraphicsSyllabus></ComputerGraphicsSyllabus>,
 		<UISyllabus></UISyllabus>,
-		<SeniorDesignHW1></SeniorDesignHW1>,
-		<SeniorDesignHW2></SeniorDesignHW2>,
-		<ComputerGraphicsHW1></ComputerGraphicsHW1>,
-		<Quiz1></Quiz1>, 
-		<ComputerGraphicsHW2></ComputerGraphicsHW2>,
-		<UIHW1></UIHW1>, 
-		<UiInClass></UiInClass>,
+		<p>12</p>,
+		<p>13</p>,
+		<p>14</p>,
+		<p>15</p>,
+		<p>16</p>,
+		<p>17</p>,
+		<p>18</p>,
 	];
 
 	const handleDownload = (event, filePath) => {
@@ -106,7 +108,6 @@ function ClassPage({ childToParent, course }) {
 	};
 
 	const handleContentClickOpen = (e, value) => {
-		console.log(value);
 		setCurrAdditionalInformation(value);
 		setOpenContentDialog(true);
 	};
@@ -122,6 +123,24 @@ function ClassPage({ childToParent, course }) {
 	const backSelected = () => {
 		childToParent("Classes");
 	};
+
+	const fileInputted = (event) => {
+		setSubmitButtonStatus(false);
+	}
+
+	const handleSubmit = (event) => {
+		console.log(event);
+		setCurrAdditionalInformation(19);
+		setOpenContentDialog(true);
+		let currentPoints = document.getElementById("points").textContent;
+		document.getElementById("points").textContent = Number(currentPoints) + 200;
+		let tmpColor = document.getElementById("points").style.color;
+		document.getElementById("points").style.color = "green";
+		setTimeout(() => {
+			document.getElementById("points").style.color = tmpColor;
+		}, 3000);
+		setSubmitButtonStatus(true);
+	}
 
 	let gradesInformation = <p></p>;
 
@@ -353,7 +372,7 @@ function ClassPage({ childToParent, course }) {
 										bgcolor: "background.paper",
 									}}
 								>
-									<ListItem>
+									<ListItem sx={{ width: "32vw" }}>
 										<ListItemAvatar>
 											<Avatar>
 												<AssignmentIcon />
@@ -367,6 +386,8 @@ function ClassPage({ childToParent, course }) {
 												secondary="Due: Oct 14th 11:59pm"
 											/>
 										</ListItemButton>
+										<input type="file" onChange={fileInputted} />
+										<Button variant="contained" disabled={submitButtonStatus} onClick={handleSubmit}>Submit</Button>
 									</ListItem>
 								</List>
 							</>
@@ -390,7 +411,7 @@ function ClassPage({ childToParent, course }) {
 										bgcolor: "background.paper",
 									}}
 								>
-									<ListItem>
+									<ListItem sx={{ width: "32vw" }}>
 										<ListItemAvatar>
 											<Avatar>
 												<AssignmentIcon />
@@ -404,6 +425,8 @@ function ClassPage({ childToParent, course }) {
 												secondary="Due: Oct 14th 11:59pm"
 											/>
 										</ListItemButton>
+										<input type="file" onChange={fileInputted} />
+										<Button variant="contained" disabled={submitButtonStatus} onClick={handleSubmit}>Submit</Button>
 									</ListItem>
 								</List>
 							</>
@@ -427,7 +450,7 @@ function ClassPage({ childToParent, course }) {
 										bgcolor: "background.paper",
 									}}
 								>
-									<ListItem>
+									<ListItem sx={{ width: "32vw" }}>
 										<ListItemAvatar>
 											<Avatar>
 												<AssignmentIcon />
@@ -441,6 +464,8 @@ function ClassPage({ childToParent, course }) {
 												secondary="Due: Oct 14th 11:59pm"
 											/>
 										</ListItemButton>
+										<input type="file" onChange={fileInputted} />
+										<Button variant="contained" disabled={submitButtonStatus} onClick={handleSubmit}>Submit</Button>
 									</ListItem>
 								</List>
 							</>
@@ -477,19 +502,24 @@ function ClassPage({ childToParent, course }) {
 									}}
 								>
 									<ListItem>
-									<ListItemAvatar>
-										<Avatar>
-										<DownloadIcon />
-										</Avatar>
-									</ListItemAvatar>
-									<ListItemButton
-										onClick={(event) => handleDownload(event, 'path/to/Course-Material.txt')}
-									>
-										<ListItemText
-										primary="Download Course Material"
-										secondary="Posted on: Sep 30"
-										/>
-									</ListItemButton>
+										<a
+											href="Course-Material.txt"
+											download="Course-Material.txt"
+										>
+											<ListItemButton>
+												<Avatar>
+													<DownloadIcon />
+												</Avatar>
+											</ListItemButton>
+										</a>
+										<ListItemButton
+											onClick={(event) => handleContentClickOpen(event, 6)}
+										>
+											<ListItemText
+												primary="Senior Design Project Ideas"
+												secondary="Posted on: Sep 30"
+											/>
+										</ListItemButton>
 									</ListItem>
 								</List>
 								</>
@@ -515,11 +545,16 @@ function ClassPage({ childToParent, course }) {
 									}}
 								>
 									<ListItem>
-										<ListItemAvatar>
-											<Avatar>
-												<AssignmentIcon />
-											</Avatar>
-										</ListItemAvatar>
+										<a
+											href="https://github.com/jack-margeson/alterna-canvas/raw/main/src/course-data/computer_graphics/presentations/01-01.pptx"
+											download="Computer-Graphics-Tutorial-1"
+										>
+											<ListItemButton>
+												<Avatar>
+													<DownloadIcon />
+												</Avatar>
+											</ListItemButton>
+										</a>
 										<ListItemButton
 											onClick={(event) => handleContentClickOpen(event, 7)}
 										>
@@ -552,11 +587,16 @@ function ClassPage({ childToParent, course }) {
 									}}
 								>
 									<ListItem>
-										<ListItemAvatar>
-											<Avatar>
-												<AssignmentIcon />
-											</Avatar>
-										</ListItemAvatar>
+										<a
+											href="https://github.com/jack-margeson/alterna-canvas/raw/main/src/course-data/ui/presentations/01-01-intro.pptx"
+											download="User-Interface-Powerpoint"
+										>
+											<ListItemButton>
+												<Avatar>
+													<DownloadIcon />
+												</Avatar>
+											</ListItemButton>
+										</a>
 										<ListItemButton
 											onClick={(event) => handleDownload(event, 'src/course-data/ui/presentations/01-01-intro.pptx')}
 										>
