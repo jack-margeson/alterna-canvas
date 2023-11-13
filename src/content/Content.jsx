@@ -93,9 +93,7 @@ function Content({ page }) {
 					childToParent={childToParent}
 					first={"Kody Penn, 2400pts"}
 					second={"Jack Margeson, 2373pts"}
-					third={"Alex Yang, 2201pts"}
-					totalpts={"2199pts"}
-					rank={"4th"}
+					third={"Alex Yang, 2021pts"}
 				></Leaderboard>
 			</div>
 		);
