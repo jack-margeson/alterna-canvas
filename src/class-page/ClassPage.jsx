@@ -10,7 +10,7 @@ import AccordionDetails from "@mui/material/AccordionDetails";
 import Typography from "@mui/material/Typography";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import AssignmentIcon from "@mui/icons-material/Assignment";
-import DownloadIcon from '@mui/icons-material/Download';
+import DownloadIcon from "@mui/icons-material/Download";
 import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
 import ListItemAvatar from "@mui/material/ListItemAvatar";
@@ -30,6 +30,24 @@ function ClassPage({ childToParent, course }) {
 	const [open, setOpen] = React.useState(false);
 
 	const [openContentDialog, setOpenContentDialog] = React.useState(false);
+
+	const [accValues, setAccValues] = React.useState([
+		false,
+		false,
+		false,
+		false,
+		false,
+	]);
+
+	const toggleAccordion = (index, expanded) => {
+		let temp = [false, false, false, false, false];
+		if (expanded === true) {
+			temp[index] = true;
+		} else {
+			accValues[index] = false;
+		}
+		setAccValues(temp);
+	};
 
 	const handleClickOpen = () => {
 		setOpen(true);
@@ -112,7 +130,10 @@ function ClassPage({ childToParent, course }) {
 			</div>
 
 			<div className="class-page-accordion">
-				<Accordion>
+				<Accordion
+					expanded={accValues[0]}
+					onChange={(e, expanded) => toggleAccordion(0, expanded)}
+				>
 					<AccordionSummary
 						expandIcon={<ExpandMoreIcon />}
 						aria-controls="panel2a-content"
@@ -233,7 +254,10 @@ function ClassPage({ childToParent, course }) {
 					</AccordionDetails>
 				</Accordion>
 
-				<Accordion>
+				<Accordion
+					expanded={accValues[1]}
+					onChange={(e, expanded) => toggleAccordion(1, expanded)}
+				>
 					<AccordionSummary
 						expandIcon={<ExpandMoreIcon />}
 						aria-controls="panel2a-content"
@@ -353,7 +377,10 @@ function ClassPage({ childToParent, course }) {
 					</AccordionDetails>
 				</Accordion>
 
-				<Accordion>
+				<Accordion
+					expanded={accValues[2]}
+					onChange={(e, expanded) => toggleAccordion(2, expanded)}
+				>
 					<AccordionSummary
 						expandIcon={<ExpandMoreIcon />}
 						aria-controls="panel2a-content"
@@ -379,9 +406,12 @@ function ClassPage({ childToParent, course }) {
 									}}
 								>
 									<ListItem>
-										<ListItemAvatar >
-											<Avatar >
-												<DownloadIcon href="./Course-Material.txt" download="Course-Material"/>
+										<ListItemAvatar>
+											<Avatar>
+												<DownloadIcon
+													href="./Course-Material.txt"
+													download="Course-Material"
+												/>
 											</Avatar>
 										</ListItemAvatar>
 										<ListItemButton
@@ -473,7 +503,10 @@ function ClassPage({ childToParent, course }) {
 					</AccordionDetails>
 				</Accordion>
 
-				<Accordion>
+				<Accordion
+					expanded={accValues[3]}
+					onChange={(e, expanded) => toggleAccordion(3, expanded)}
+				>
 					<AccordionSummary
 						expandIcon={<ExpandMoreIcon />}
 						aria-controls="panel2a-content"
@@ -595,7 +628,10 @@ function ClassPage({ childToParent, course }) {
 					</AccordionDetails>
 				</Accordion>
 
-				<Accordion>
+				<Accordion
+					expanded={accValues[4]}
+					onChange={(e, expanded) => toggleAccordion(4, expanded)}
+				>
 					<AccordionSummary
 						expandIcon={<ExpandMoreIcon />}
 						aria-controls="panel2a-content"
@@ -629,10 +665,7 @@ function ClassPage({ childToParent, course }) {
 										<ListItemButton
 											onClick={(event) => handleContentClickOpen(event, 2)}
 										>
-											<ListItemText
-												primary="Homework 1"
-												secondary="97/100"
-											/>
+											<ListItemText primary="Homework 1" secondary="97/100" />
 										</ListItemButton>
 									</ListItem>
 									<ListItem>
@@ -644,10 +677,7 @@ function ClassPage({ childToParent, course }) {
 										<ListItemButton
 											onClick={(event) => handleContentClickOpen(event, 2)}
 										>
-											<ListItemText
-												primary="Homework 2"
-												secondary="99/100"
-											/>
+											<ListItemText primary="Homework 2" secondary="99/100" />
 										</ListItemButton>
 									</ListItem>
 								</List>
@@ -682,10 +712,7 @@ function ClassPage({ childToParent, course }) {
 											onClick={(event) => handleContentClickOpen(event, 2)}
 										>
 											{" "}
-											<ListItemText
-												primary="Homework 1"
-												secondary="87/100"
-											/>
+											<ListItemText primary="Homework 1" secondary="87/100" />
 										</ListItemButton>
 									</ListItem>
 									<ListItem>
@@ -698,10 +725,7 @@ function ClassPage({ childToParent, course }) {
 											onClick={(event) => handleContentClickOpen(event, 2)}
 										>
 											{" "}
-											<ListItemText
-												primary="Quiz 1"
-												secondary="9/10"
-											/>
+											<ListItemText primary="Quiz 1" secondary="9/10" />
 										</ListItemButton>
 									</ListItem>
 									<ListItem>
@@ -714,10 +738,7 @@ function ClassPage({ childToParent, course }) {
 											onClick={(event) => handleContentClickOpen(event, 2)}
 										>
 											{" "}
-											<ListItemText
-												primary="Homework 2"
-												secondary="45/50"
-											/>
+											<ListItemText primary="Homework 2" secondary="45/50" />
 										</ListItemButton>
 									</ListItem>
 								</List>
@@ -752,10 +773,7 @@ function ClassPage({ childToParent, course }) {
 											onClick={(event) => handleContentClickOpen(event, 2)}
 										>
 											{" "}
-											<ListItemText
-												primary="Homework 1"
-												secondary="100/100"
-											/>
+											<ListItemText primary="Homework 1" secondary="100/100" />
 										</ListItemButton>
 									</ListItem>
 									<ListItem>
