@@ -406,14 +406,14 @@ function ClassPage({ childToParent, course }) {
 									}}
 								>
 									<ListItem>
-										<ListItemAvatar>
+										<ListItemButton>
 											<Avatar>
 												<DownloadIcon
 													href="./Course-Material.txt"
 													download="Course-Material"
 												/>
 											</Avatar>
-										</ListItemAvatar>
+										</ListItemButton>
 										<ListItemButton
 											onClick={(event) => handleContentClickOpen(event, 2)}
 										>
