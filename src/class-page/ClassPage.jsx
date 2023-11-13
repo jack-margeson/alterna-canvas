@@ -18,6 +18,13 @@ import ListItemText from "@mui/material/ListItemText";
 import ListItemButton from "@mui/material/ListItemButton";
 import AnnouncementIcon from "@mui/icons-material/Announcement";
 
+import ComputerGraphicsHW4 from "../course-data/computer_graphics/assignments/assignment_04";
+import ComputerGraphicsSyllabus from "../course-data/computer_graphics/course_info/computer_graphics_syllabus";
+import SeniorDesignHW1 from "../course-data/senior_design/assignments/assignment_01";
+import SeniorDesignSyllabus from "../course-data/senior_design/course_info/senior_design_syllabus";
+import UIHW5 from "../course-data/ui/assignments/assignment_05";
+import UISyllabus from "../course-data/ui/course_info/ui_syllabus";
+
 function ClassPage({ childToParent, course }) {
 	const [open, setOpen] = React.useState(false);
 
