@@ -1,19 +1,50 @@
 import "./ToDo.scss";
-import TodoItem from "../class-card/TodoItem"
+import * as React from "react";
+import TodoItem from "../class-card/TodoItem";
+import Button from "@mui/material/Button";
 
-function ToDo({childToParent}) {
-    childToParent("Classes");
+function ToDo({ childToParent }) {
+	childToParent("Classes");
+
+	if (!localStorage.getItem("todoItems")) {
+		localStorage.setItem("todoItems", JSON.stringify([]));
+	}
+
+	let [todoItems, setTodoItems] = React.useState(
+		JSON.parse(localStorage.getItem("todoItems"))
+	);
+
+	let clearTodo = () => {
+		setTodoItems([]);
+		localStorage.setItem("todoItems", JSON.stringify([]));
+	};
+
+	let addTodo = () => {
+		let tmpTodo = todoItems;
+		let todoText = prompt("Enter to-do item text:");
+		setTodoItems((currItems) => [...currItems, todoText]);
+		localStorage.setItem("todoItems", JSON.stringify([...tmpTodo, todoText]));
+	};
+
+	let todoList = todoItems;
 
 	return (
-        <div className="to-do-container">
-            <TodoItem text="CS5001 - HW 3"></TodoItem>
-            <TodoItem text="CS5001 - Quiz 3"></TodoItem>
-            <TodoItem text="CS5160 - HW 4a"></TodoItem>
-            <TodoItem text="CS5160 - HW 4b"></TodoItem>
-            <TodoItem text="CS5167 - MON class activity"></TodoItem>
-            <TodoItem text="CS5167 - HW 5"></TodoItem>
-            <TodoItem text="CS5167 - Midterm 1"></TodoItem>
-        </div>
+		<div className="to-do-container">
+			<div className="todo-buttons">
+				<Button variant="contained" onClick={addTodo}>
+					Add To-do item
+				</Button>
+				<Button variant="contained" onClick={clearTodo}>
+					Clear to-do list
+				</Button>
+			</div>
+			<div>
+				{todoList.length <= 0 ? <p>No to-do items. Add one above!</p> : " "}
+				{todoList.map((todoItem, index) => (
+					<TodoItem key={index} text={todoItem}></TodoItem>
+				))}
+			</div>
+		</div>
 	);
 }
 

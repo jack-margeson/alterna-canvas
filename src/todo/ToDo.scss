@@ -1,6 +1,20 @@
-.to-do-container{
-    display: flex;
-    flex-direction: column;
-    padding-top: 30px;
-    padding-left: 30px;
+@import "../Colorscheme.scss";
+
+.to-do-container {
+	display: flex;
+	flex-direction: column;
+	padding-top: 30px;
+	padding-left: 30px;
+	color: $antiflash-white;
+	font-size: 20px;
+}
+
+.todo-buttons {
+	display: flex;
+	width: 100%;
+	margin-bottom: 20px;
+}
+
+.todo-buttons > Button {
+	margin-right: 15px;
 }
