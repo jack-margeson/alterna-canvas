@@ -23,8 +23,20 @@ import ComputerGraphicsHW4 from "../course-data/computer_graphics/assignments/as
 import ComputerGraphicsSyllabus from "../course-data/computer_graphics/course_info/computer_graphics_syllabus";
 import SeniorDesignHW1 from "../course-data/senior_design/assignments/assignment_01";
 import SeniorDesignSyllabus from "../course-data/senior_design/course_info/senior_design_syllabus";
-import UIHW5 from "../course-data/ui/assignments/assignment_05";
+import UiInClass from "../course-data/ui/assignments/assignment_05";
 import UISyllabus from "../course-data/ui/course_info/ui_syllabus";
+import ComputerGraphicsTutorial1 from "../course-data/computer_graphics/pages/01";
+import UIHW1 from "../course-data/ui/assignments/assignment_01";
+import UiAnnouncement from "../course-data/ui/course_info/announcement";
+import UIHW5 from "../course-data/ui/assignments/assignment_03";
+import SeniorDesignHW2 from "../course-data/senior_design/assignments/assignment_02";
+import SeniorDesignAnnouncement from "../course-data/senior_design/course_info/SeniorDesignAnnouncement";
+import ComputerGraphicsAnnouncement from "../course-data/computer_graphics/course_info/ComputerGraphicsAnnouncement";
+import ComputerGraphicsHW1 from "../course-data/computer_graphics/assignments/assignment_01";
+import ComputerGraphicsHW2 from "../course-data/computer_graphics/assignments/assignment_02";
+import Quiz1 from "../course-data/computer_graphics/assignments/quiz1";
+import Downloadppt from "../course-data/senior_design/course_info/Downloadppt";
+
 
 function ClassPage({ childToParent, course }) {
 	const [open, setOpen] = React.useState(false);
@@ -43,26 +55,37 @@ function ClassPage({ childToParent, course }) {
 		React.useState([-1]);
 
 	const additionalInformation = [
-		<p>0</p>,
-		<p>1</p>,
-		<p>2</p>,
+		<SeniorDesignAnnouncement></SeniorDesignAnnouncement>, 
+		<ComputerGraphicsAnnouncement></ComputerGraphicsAnnouncement>, 
+		<UiAnnouncement></UiAnnouncement>,
 		<SeniorDesignHW1></SeniorDesignHW1>,
 		<ComputerGraphicsHW4></ComputerGraphicsHW4>,
 		<UIHW5></UIHW5>,
-		<p>6</p>,
-		<p>7</p>,
+		<Downloadppt></Downloadppt>,
+		<ComputerGraphicsTutorial1></ComputerGraphicsTutorial1>,
 		<p>8</p>,
 		<SeniorDesignSyllabus></SeniorDesignSyllabus>,
 		<ComputerGraphicsSyllabus></ComputerGraphicsSyllabus>,
 		<UISyllabus></UISyllabus>,
-		<p>12</p>,
-		<p>13</p>,
-		<p>14</p>,
-		<p>15</p>,
-		<p>16</p>,
-		<p>17</p>,
-		<p>18</p>,
+		<SeniorDesignHW1></SeniorDesignHW1>,
+		<SeniorDesignHW2></SeniorDesignHW2>,
+		<ComputerGraphicsHW1></ComputerGraphicsHW1>,
+		<Quiz1></Quiz1>, 
+		<ComputerGraphicsHW2></ComputerGraphicsHW2>,
+		<UIHW1></UIHW1>, 
+		<UiInClass></UiInClass>,
 	];
+
+	const handleDownload = (event, filePath) => {
+		event.preventDefault(); 
+		const link = document.createElement("a");
+		link.href = filePath;
+		link.download = filePath.split('/').pop(); 
+		document.body.appendChild(link); 
+		link.click(); 
+		document.body.removeChild(link); 
+	  };
+	  
 
 	const toggleAccordion = (index, expanded) => {
 		let temp = [false, false, false, false, false];
@@ -437,46 +460,42 @@ function ClassPage({ childToParent, course }) {
 						<Typography>Course Materials</Typography>
 					</AccordionSummary>
 					<AccordionDetails
-						sx={{
-							margin: "0",
-							padding: "0",
-							maxHeight: "auto",
-							overflowY: "auto",
-						}}
-					>
-						{course === "CS5001" && (
-							<>
+							sx={{
+								margin: "0",
+								padding: "0",
+								maxHeight: "auto",
+								overflowY: "auto",
+							}}
+							>
+							{course === "CS5001" && (
+								<>
 								<List
 									sx={{
-										width: "100%",
-										maxWidth: 360,
-										bgcolor: "background.paper",
+									width: "100%",
+									maxWidth: 360,
+									bgcolor: "background.paper",
 									}}
 								>
 									<ListItem>
-										<a
-											href="Course-Material.txt"
-											download="Course-Material.txt"
-										>
-											<ListItemButton>
-												<Avatar>
-													<DownloadIcon />
-												</Avatar>
-											</ListItemButton>
-										</a>
-										<ListItemButton
-											onClick={(event) => handleContentClickOpen(event, 6)}
-										>
-											<ListItemText
-												primary="Senior Design Project Ideas"
-												secondary="Posted on: Sep 30"
-											/>
-										</ListItemButton>
+									<ListItemAvatar>
+										<Avatar>
+										<DownloadIcon />
+										</Avatar>
+									</ListItemAvatar>
+									<ListItemButton
+										onClick={(event) => handleDownload(event, 'path/to/Course-Material.txt')}
+									>
+										<ListItemText
+										primary="Download Course Material"
+										secondary="Posted on: Sep 30"
+										/>
+									</ListItemButton>
 									</ListItem>
 								</List>
-							</>
-						)}
-					</AccordionDetails>
+								</>
+							)}
+						</AccordionDetails>
+
 
 					<AccordionDetails
 						sx={{
@@ -539,7 +558,7 @@ function ClassPage({ childToParent, course }) {
 											</Avatar>
 										</ListItemAvatar>
 										<ListItemButton
-											onClick={(event) => handleContentClickOpen(event, 8)}
+											onClick={(event) => handleDownload(event, 'src/course-data/ui/presentations/01-01-intro.pptx')}
 										>
 											<ListItemText
 												primary="User Interface Powerpoint "

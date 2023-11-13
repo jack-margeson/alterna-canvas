@@ -1,4 +1,4 @@
-function UIHW5() {
+function UiInClass() {
     return(
         <div>
             <h2> Week 5 in class work </h2>
@@ -12,4 +12,4 @@ function UIHW5() {
     );
 }
 
-export default UIHW5;
+export default UiInClass;
