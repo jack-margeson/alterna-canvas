@@ -383,11 +383,8 @@ function ClassPage({ childToParent, course }) {
 								>
 									<ListItem>
 										<ListItemAvatar>
-											<Avatar>
-												<ListItemButton
-													onClick={() => handleDownload()}
-												>	<DownloadIcon />
-												</ListItemButton>
+											<Avatar >
+												<DownloadIcon onClick={() => handleDownload()}/>
 											</Avatar>
 										</ListItemAvatar>
 										<ListItemButton
