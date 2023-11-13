@@ -15,7 +15,6 @@
 
 .class-page-main {
 	max-height: 90%;
-	overflow-y: scroll;
 	padding-top: 30px;
 	color: $antiflash-white;
 	
@@ -35,6 +34,7 @@
 
 .class-page-accordion {
 	background-color: $night;
+	overflow-y: scroll;
 
 
 }

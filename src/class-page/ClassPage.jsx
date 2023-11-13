@@ -10,6 +10,7 @@ import AccordionDetails from "@mui/material/AccordionDetails";
 import Typography from "@mui/material/Typography";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import AssignmentIcon from "@mui/icons-material/Assignment";
+import DownloadIcon from '@mui/icons-material/Download';
 import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
 import ListItemAvatar from "@mui/material/ListItemAvatar";
@@ -46,6 +47,16 @@ function ClassPage({ childToParent, course }) {
 	const handleContentClose = (value) => {
 		setOpenContentDialog(false);
 	};
+
+	const handleDownload = () => {
+		const data = [""]
+		const file = new Blob([data], {type: 'text/plain'});
+		const element = document.createElement("a");
+		element.href = URL.createObjectURL(file);
+		element.download = "Course-Material-" + Date.now() + ".txt";
+		document.body.appendChild(element);
+		element.click();
+	}
 
 	const redirectToZoom = () => {
 		window.open("https://zoom.us/", "_blank", "noreferrer");
@@ -378,9 +389,9 @@ function ClassPage({ childToParent, course }) {
 									}}
 								>
 									<ListItem>
-										<ListItemAvatar>
-											<Avatar>
-												<AssignmentIcon />
+										<ListItemAvatar >
+											<Avatar >
+												<DownloadIcon onClick={handleDownload()}/>
 											</Avatar>
 										</ListItemAvatar>
 										<ListItemButton
@@ -585,6 +596,191 @@ function ClassPage({ childToParent, course }) {
 											<ListItemText
 												primary="CS5167 Syllabus"
 												secondary="Due: Oct 14th 11:59pm"
+											/>
+										</ListItemButton>
+									</ListItem>
+								</List>
+							</>
+						)}
+					</AccordionDetails>
+				</Accordion>
+
+				<Accordion>
+					<AccordionSummary
+						expandIcon={<ExpandMoreIcon />}
+						aria-controls="panel2a-content"
+						sx={{ padding: "0px", paddingLeft: "15px" }}
+					>
+						<Typography>Grades</Typography>
+					</AccordionSummary>
+					<AccordionDetails
+						sx={{
+							margin: "0",
+							padding: "0",
+							maxHeight: "auto",
+							overflowY: "auto",
+						}}
+					>
+						{course === "CS5001" && (
+							<>
+								<List
+									sx={{
+										width: "100%",
+										maxWidth: 360,
+										bgcolor: "background.paper",
+									}}
+								>
+									<ListItem>
+										<ListItemAvatar>
+											<Avatar>
+												<AssignmentIcon />
+											</Avatar>
+										</ListItemAvatar>
+										<ListItemButton
+											onClick={(event) => handleContentClickOpen(event, 2)}
+										>
+											<ListItemText
+												primary="Homework 1"
+												secondary="97/100"
+											/>
+										</ListItemButton>
+									</ListItem>
+									<ListItem>
+										<ListItemAvatar>
+											<Avatar>
+												<AssignmentIcon />
+											</Avatar>
+										</ListItemAvatar>
+										<ListItemButton
+											onClick={(event) => handleContentClickOpen(event, 2)}
+										>
+											<ListItemText
+												primary="Homework 2"
+												secondary="99/100"
+											/>
+										</ListItemButton>
+									</ListItem>
+								</List>
+							</>
+						)}
+					</AccordionDetails>
+
+					<AccordionDetails
+						sx={{
+							margin: "0",
+							padding: "0",
+							maxHeight: "auto",
+							overflowY: "auto",
+						}}
+					>
+						{course === "CS5160" && (
+							<>
+								<List
+									sx={{
+										width: "100%",
+										maxWidth: 360,
+										bgcolor: "background.paper",
+									}}
+								>
+									<ListItem>
+										<ListItemAvatar>
+											<Avatar>
+												<AssignmentIcon />
+											</Avatar>
+										</ListItemAvatar>
+										<ListItemButton
+											onClick={(event) => handleContentClickOpen(event, 2)}
+										>
+											{" "}
+											<ListItemText
+												primary="Homework 1"
+												secondary="87/100"
+											/>
+										</ListItemButton>
+									</ListItem>
+									<ListItem>
+										<ListItemAvatar>
+											<Avatar>
+												<AssignmentIcon />
+											</Avatar>
+										</ListItemAvatar>
+										<ListItemButton
+											onClick={(event) => handleContentClickOpen(event, 2)}
+										>
+											{" "}
+											<ListItemText
+												primary="Quiz 1"
+												secondary="9/10"
+											/>
+										</ListItemButton>
+									</ListItem>
+									<ListItem>
+										<ListItemAvatar>
+											<Avatar>
+												<AssignmentIcon />
+											</Avatar>
+										</ListItemAvatar>
+										<ListItemButton
+											onClick={(event) => handleContentClickOpen(event, 2)}
+										>
+											{" "}
+											<ListItemText
+												primary="Homework 2"
+												secondary="45/50"
+											/>
+										</ListItemButton>
+									</ListItem>
+								</List>
+							</>
+						)}
+					</AccordionDetails>
+
+					<AccordionDetails
+						sx={{
+							margin: "0",
+							padding: "0",
+							maxHeight: "auto",
+							overflowY: "auto",
+						}}
+					>
+						{course === "CS5167" && (
+							<>
+								<List
+									sx={{
+										width: "100%",
+										maxWidth: 360,
+										bgcolor: "background.paper",
+									}}
+								>
+									<ListItem>
+										<ListItemAvatar>
+											<Avatar>
+												<AssignmentIcon />
+											</Avatar>
+										</ListItemAvatar>
+										<ListItemButton
+											onClick={(event) => handleContentClickOpen(event, 2)}
+										>
+											{" "}
+											<ListItemText
+												primary="Homework 1"
+												secondary="100/100"
+											/>
+										</ListItemButton>
+									</ListItem>
+									<ListItem>
+										<ListItemAvatar>
+											<Avatar>
+												<AssignmentIcon />
+											</Avatar>
+										</ListItemAvatar>
+										<ListItemButton
+											onClick={(event) => handleContentClickOpen(event, 2)}
+										>
+											{" "}
+											<ListItemText
+												primary="In-Class Activity"
+												secondary="20/20"
 											/>
 										</ListItemButton>
 									</ListItem>
