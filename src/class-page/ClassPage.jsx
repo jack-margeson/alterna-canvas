@@ -48,16 +48,6 @@ function ClassPage({ childToParent, course }) {
 		setOpenContentDialog(false);
 	};
 
-	const handleDownload = () => {
-		const data = [""]
-		const file = new Blob([data], {type: 'text/plain'});
-		const element = document.createElement("a");
-		element.href = URL.createObjectURL(file);
-		element.download = "Course-Material-" + Date.now() + ".txt";
-		document.body.appendChild(element);
-		element.click();
-	}
-
 	const redirectToZoom = () => {
 		window.open("https://zoom.us/", "_blank", "noreferrer");
 	};
@@ -391,7 +381,7 @@ function ClassPage({ childToParent, course }) {
 									<ListItem>
 										<ListItemAvatar >
 											<Avatar >
-												<DownloadIcon onClick={handleDownload()}/>
+												<DownloadIcon href="./Course-Material.txt" download="Course-Material"/>
 											</Avatar>
 										</ListItemAvatar>
 										<ListItemButton
