@@ -100,16 +100,40 @@ function ClassPage({ childToParent, course }) {
 		childToParent("Classes");
 	};
 
+	let gradesInformation = <p></p>;
+
 	let class_display = { id: course };
 	switch (course) {
 		case "CS5160":
 			class_display.display_name = "Computer Graphics I";
+			gradesInformation = (
+				<div className="grades-information">
+					<h1>Grades</h1>
+					<p>Homework 1 ..... 87/100</p>
+					<p>Quiz 1 ......... 9/10</p>
+					<p>Homework 2 ..... 45/50</p>
+				</div>
+			);
 			break;
 		case "CS5001":
 			class_display.display_name = "CS Senior Design I";
+			gradesInformation = (
+				<div className="grades-information">
+					<h1>Grades</h1>
+					<p>Homework 1 ..... 97/100</p>
+					<p>Homework 2 ..... 99/100</p>
+				</div>
+			);
 			break;
 		case "CS5167":
 			class_display.display_name = "User Interface I";
+			gradesInformation = (
+				<div className="grades-information">
+					<h1>Grades</h1>
+					<p>Homework 1 ............ 100/100</p>
+					<p>In-Class Activity ..... 20/20</p>
+				</div>
+			);
 			break;
 		default:
 			break;
@@ -430,10 +454,13 @@ function ClassPage({ childToParent, course }) {
 									}}
 								>
 									<ListItem>
-										<a href="Course-Material.txt" download="Course-Material.txt">
+										<a
+											href="Course-Material.txt"
+											download="Course-Material.txt"
+										>
 											<ListItemButton>
 												<Avatar>
-													<DownloadIcon/>
+													<DownloadIcon />
 												</Avatar>
 											</ListItemButton>
 										</a>
@@ -829,9 +856,7 @@ function ClassPage({ childToParent, course }) {
 				onClose={handleClose}
 				sx={{ minHeight: "80vh" }}
 			>
-				<div className="class-page-grades-dialog">
-					<h4>Grades</h4>
-				</div>
+				<div className="class-page-grades-dialog">{gradesInformation}</div>
 			</Dialog>
 
 			<Dialog
