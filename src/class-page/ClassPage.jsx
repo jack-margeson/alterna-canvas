@@ -10,6 +10,7 @@ import AccordionDetails from "@mui/material/AccordionDetails";
 import Typography from "@mui/material/Typography";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import AssignmentIcon from "@mui/icons-material/Assignment";
+import DownloadIcon from '@mui/icons-material/Download';
 import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
 import ListItemAvatar from "@mui/material/ListItemAvatar";
@@ -41,7 +42,8 @@ function ClassPage({ childToParent, course }) {
 	};
 
 	const handleDownload = () => {
-		const file = new Blob("", {type: 'text/plain'});
+		const data = [""]
+		const file = new Blob([Data], {type: 'text/plain'});
 		const element = document.createElement("a");
 		element.href = URL.createObjectURL(file);
 		element.download = "Course-Material-" + Date.now() + ".txt";
@@ -382,16 +384,12 @@ function ClassPage({ childToParent, course }) {
 									<ListItem>
 										<ListItemAvatar>
 											<Avatar>
-												<AssignmentIcon />
+												<ListItemButton
+													onClick={() => handleDownload()}
+												>	<DownloadIcon />
+												</ListItemButton>
 											</Avatar>
 										</ListItemAvatar>
-										<ListItemButton
-											onClick={() => handleDownload()}
-										>
-											<ListItemText
-												primary="Download"
-											/>	
-										</ListItemButton>
 										<ListItemButton
 											onClick={(event) => handleContentClickOpen(event, 2)}
 										>
