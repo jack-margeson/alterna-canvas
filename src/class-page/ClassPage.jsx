@@ -54,6 +54,8 @@ function ClassPage({ childToParent, course }) {
 		false,
 	]);
 
+	const [classProgress, setClassProgress] = React.useState([45, 60, 70]);
+
 	const [currAdditionalInformation, setCurrAdditionalInformation] =
 		React.useState([-1]);
 
@@ -77,6 +79,7 @@ function ClassPage({ childToParent, course }) {
 		<p>16</p>,
 		<p>17</p>,
 		<p>18</p>,
+		<p>Your assignment has been submitted! Points have been added to your total, and your course progress has been updated.</p>
 	];
 
 	const handleDownload = (event, filePath) => {
@@ -141,6 +144,30 @@ function ClassPage({ childToParent, course }) {
 			document.getElementById("points").style.color = tmpColor;
 		}, 3000);
 		setSubmitButtonStatus(true);
+
+		// change class progress 
+		if (course === "CS5001") {
+			let tmpProg = classProgress;
+			tmpProg[0] += 10;
+			if (tmpProg[0] > 100) {
+				tmpProg[0] = 100;
+			}
+			setClassProgress(tmpProg);
+		} else if (course === "CS5160") {
+			let tmpProg = classProgress;
+			tmpProg[1] += 10;
+			if (tmpProg[1] > 100) {
+				tmpProg[1] = 100;
+			}
+			setClassProgress(tmpProg);
+		} else {
+			let tmpProg = classProgress;
+			tmpProg[2] += 10;
+			if (tmpProg[2] > 100) {
+				tmpProg[2] = 100;
+			}
+			setClassProgress(tmpProg);
+		}
 	}
 
 	let gradesInformation = <p></p>;
@@ -933,19 +960,19 @@ function ClassPage({ childToParent, course }) {
 			{course === "CS5001" && (
 				<div style={{ marginTop: "1em" }}>
 					<h2 style={{ color: "#dedbd6", marginBottom: "15px" }}>Course Progress:</h2>
-					<ProgressBar bgColor="#07393cff" completed="45" />
+					<ProgressBar bgColor="#07393cff" completed={classProgress[0]} />
 				</div>
 			)}
 			{course === "CS5160" && (
 				<div style={{ marginTop: "1em" }}>
 					<h2 style={{ color: "#dedbd6", marginBottom: "15px" }}>Course Progress:</h2>
-					<ProgressBar bgColor="#07393cff" completed="60" />
+					<ProgressBar bgColor="#07393cff" completed={classProgress[1]} />
 				</div>
 			)}
 			{course === "CS5167" && (
 				<div style={{ marginTop: "1em", marginBottom: "15px" }}>
 					<h2 style={{ color: "#dedbd6" }}>Course Progress:</h2>
-					<ProgressBar bgColor="#07393cff" completed="65" />
+					<ProgressBar bgColor="#07393cff" completed={classProgress[2]} />
 				</div>
 			)}
 
