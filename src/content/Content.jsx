@@ -91,9 +91,12 @@ function Content({ page }) {
 			<div className="content-main">
 				<Leaderboard
 					childToParent={childToParent}
-					first={"Kody Penn, 2400pts"}
-					second={"Jack Margeson, 2373pts"}
-					third={"Alex Yang, 2021pts"}
+					name1={"Kody Penn"}
+					pts1={2400}
+					name2={"Jack Margeson"}
+					pts2={2373}
+					name3={"Alex Yang"}
+					pts3={2021}
 				></Leaderboard>
 			</div>
 		);
