@@ -48,9 +48,19 @@ In addition to traditional interviews, the members of our team conducted context
 
 ## Project Requirements
 
-Following the sketching and ideation phase as ewll as the interviews/contextual inquiry phase, our team set aside some time to talk about what information we gained from these activites as we formed a list of project requirements that our project was to include alongside the mandatory requirements as dictated by the assignment. The project requirements that we worked towards with the Alterna Canvas project are listed here:
-- requirement 1
-- requirement 2
+Following the sketching and ideation phase as well as the interviews/contextual inquiry phase, our team set aside some time to talk about what information we gained from these activities as we formed a list of project requirements that our project was to include alongside the mandatory requirements as dictated by the assignment. The project requirements that we worked towards with the Alternate Canvas project are listed here:
+- Students need to be able to view the syllabus
+- Students need to be able to view the syllabus
+- Students need to be able to view all announcements- with new announcements highlighted so students will see them.  
+- Students need to be able to view a list of presentations and other course materials, organized by modules.   
+- Students need to be able to see upcoming assignments
+- Students need to be able to see their progress in the course using a gamification approach
+- Students need to be able to submit assignments.  Submission needs to have text entry and document upload options 
+- Students need to be able to access course materials- view or download presentations
+- Students need to be able to view their grades on assignments, and their grade in the course so far, according to the instructor's grade weighting scheme. 
+- Students need to be able to plan their work- using a calendar or to-do list.  
+- Students need a Zoom connection option, but this feature does not need to be fully functional, leaving as "future work" connecting to Zoom.  
+- As students do tasks in this class, the UI should update to reflect their progress in the class, using your gamification approach.  You should be able to perform a sequence of tasks for the student, and see changes in the UI.
 
 ## Interface Description
 
