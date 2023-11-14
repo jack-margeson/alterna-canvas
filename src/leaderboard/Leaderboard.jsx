@@ -15,8 +15,9 @@ function Leaderboard({childToParent, name1, pts1, name2, pts2, name3, pts3}) {
             document.getElementById("2text").textContent = name2.concat(", ",pts2.toString());
             pts3 = pts3 + Math.floor(Math.random() * 130) + 110;
             document.getElementById("3text").textContent = name3.concat(", ",pts3.toString());
-            document.getElementById("points").textContent = pts1;
-            document.getElementById("pid").textContent = "Your cumulative points: ".concat(points.toString());
+            points = pts1;
+            document.getElementById("points").textContent = points;
+            document.getElementById("pid").textContent = "Your cumulative points: ".concat(pts1.toString());
         }
         else if (pts2 === points){
             pts1 = pts1 + Math.floor(Math.random() * 170) + 150;
@@ -25,8 +26,9 @@ function Leaderboard({childToParent, name1, pts1, name2, pts2, name3, pts3}) {
             document.getElementById("2text").textContent = name2.concat(", ",pts2.toString());
             pts3 = pts3 + Math.floor(Math.random() * 130) + 110;
             document.getElementById("3text").textContent = name3.concat(", ",pts3.toString());
-            document.getElementById("points").textContent = pts2;
-            document.getElementById("pid").textContent = "Your cumulative points: ".concat(points.toString());
+            points = pts2;
+            document.getElementById("points").textContent = points;
+            document.getElementById("pid").textContent = "Your cumulative points: ".concat(pts2.toString());
         }
         else if (pts3 === points){
             pts1 = pts1 + Math.floor(Math.random() * 170) + 150;
@@ -35,8 +37,9 @@ function Leaderboard({childToParent, name1, pts1, name2, pts2, name3, pts3}) {
             document.getElementById("2text").textContent = name2.concat(", ",pts2.toString());
             pts3 = pts3 + Math.floor(Math.random() * 130) + 110;
             document.getElementById("3text").textContent = name3.concat(", ",pts3.toString());
-            document.getElementById("points").textContent = pts3;
-            document.getElementById("pid").textContent = "Your cumulative points: ".concat(points.toString());
+            points = pts3;
+            document.getElementById("points").textContent = points;
+            document.getElementById("pid").textContent = "Your cumulative points: ".concat(pts3.toString());
         }
         else{
             pts1 = pts1 + Math.floor(Math.random() * 170) + 150;
