@@ -19,20 +19,17 @@ function Leaderboard({childToParent, name1, pts1, name2, pts2, name3, pts3}) {
         document.getElementById("pid").textContent = "Your cumulative points: ".concat(points.toString());
 	};
 
-    if (points === "2000"){
-        rank = "4th";
-    }
-    else if (points === "2373"){
-        rank = "2nd";
-    }
-    else if (points === "2400"){
+    if (points >= pts1){
         rank = "1st";
     }
-    else if (points === "2021" || points === " 2021"){
+    else if (points >= pts2){
+        rank = "2nd";
+    }
+    else if (points >= pts3){
         rank = "3rd";
     }
     else{
-        rank = "5th";
+        rank = "4th";
     }
 
 	return (
