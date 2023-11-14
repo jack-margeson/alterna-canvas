@@ -4,12 +4,16 @@ import "./Leaderboard.scss";
 function Leaderboard({childToParent, name1, pts1, name2, pts2, name3, pts3}) {
     childToParent("Classes");
     let points = document.getElementById("points").textContent;
+    points = parseInt(points.replace(/\s/g, ""))
     let rank;
 
     const timebuttonPressed = () => {
 		pts1 = pts1 + Math.floor(Math.random() * 170) + 150;
+        console.log(pts1.toString())
         pts2 = pts2 + Math.floor(Math.random() * 150) + 130;
+        console.log(pts2.toString())
         pts3 = pts3 + Math.floor(Math.random() * 130) + 110;
+        console.log(pts3.toString())
         points = points + Math.floor(Math.random() * 110) + 90;
         document.getElementById("points").textContent = points;
 	};
@@ -47,11 +51,11 @@ function Leaderboard({childToParent, name1, pts1, name2, pts2, name3, pts3}) {
                 </div>
             </div>
             <div className="text-area">
-                <p>Your cumulative points: {points}</p>
+                <p>Your cumulative points: {points.toString()}</p>
                 <p>Your rank: {rank}</p>
             </div>
             <div className="button-area">
-                <button onClick={timebuttonPressed}>+1 week</button>
+                <button className="time-button" onClick={timebuttonPressed}>+1 week</button>
             </div>
         </div>
 	)	
