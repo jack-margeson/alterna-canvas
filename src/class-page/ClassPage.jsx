@@ -67,7 +67,7 @@ function ClassPage({ childToParent, course }) {
 		<ComputerGraphicsHW4></ComputerGraphicsHW4>,
 		<UIHW5></UIHW5>,
 		<Downloadppt></Downloadppt>,
-        <ComputerGraphicsTutorial1></ComputerGraphicsTutorial1>,
+		<ComputerGraphicsTutorial1></ComputerGraphicsTutorial1>,
 		<SeniorDesignSyllabus></SeniorDesignSyllabus>,
 		<SeniorDesignSyllabus></SeniorDesignSyllabus>,
 		<ComputerGraphicsSyllabus></ComputerGraphicsSyllabus>,
@@ -75,10 +75,12 @@ function ClassPage({ childToParent, course }) {
 		<SeniorDesignHW1></SeniorDesignHW1>,
 		<SeniorDesignHW2></SeniorDesignHW2>,
 		<ComputerGraphicsHW1></ComputerGraphicsHW1>,
-		<Quiz1></Quiz1>, 
+		<Quiz1></Quiz1>,
 		<ComputerGraphicsHW2></ComputerGraphicsHW2>,
 		<UIHW1></UIHW1>,
 		<UiInClass></UiInClass>,
+		// please don't remove the line below--using it as a quick way to diplay dialog for assignment submission
+		<p>Your assignment has been submitted! Points have been added to your total, and your course progress has been updated.</p>
 	];
 
 	const handleDownload = (event, filePath) => {
