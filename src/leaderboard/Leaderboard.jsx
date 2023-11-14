@@ -7,9 +7,9 @@ function Leaderboard({childToParent, name1, pts1, name2, pts2, name3, pts3}) {
     let rank;
 
     const timebuttonPressed = () => {
-		first = first + Math.floor(Math.random() * 170) + 150;
-        second = second + Math.floor(Math.random() * 150) + 130;
-        third = third + Math.floor(Math.random() * 130) + 110;
+		pts1 = pts1 + Math.floor(Math.random() * 170) + 150;
+        pts2 = pts2 + Math.floor(Math.random() * 150) + 130;
+        pts3 = pts3 + Math.floor(Math.random() * 130) + 110;
         points = points + Math.floor(Math.random() * 110) + 90;
         document.getElementById("points").textContent = points;
 	};
@@ -34,15 +34,15 @@ function Leaderboard({childToParent, name1, pts1, name2, pts2, name3, pts3}) {
         <div className="leaderboard-main">
             <div className="container podium">
                 <div className="podium__item">
-                    <p className="podium__city">{second.concat(", ",secondpts.toString())}</p>
+                    <p className="podium__city">{name2.concat(", ",pts2.toString())}</p>
                     <div className="podium__rank second">2</div>
                 </div>
                 <div className="podium__item">
-                    <p className="podium__city">{first.concat(", ",firstpts.toString())}</p>
+                    <p className="podium__city">{name1.concat(", ",pts1.toString())}</p>
                     <div className="podium__rank first">1</div>
                 </div>
                 <div className="podium__item">
-                    <p className="podium__city">{third.concat(", ",thirdpts.toString())}</p>
+                    <p className="podium__city">{name3.concat(", ",pts3.toString())}</p>
                     <div className="podium__rank third">3</div>
                 </div>
             </div>
