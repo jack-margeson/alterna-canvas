@@ -43,8 +43,8 @@ Several interviews were conducted by each member of the team to create a compreh
 ## Contextual Inquiry
 
 In addition to traditional interviews, the members of our team conducted contextual inquiries on Canvas users. With limited instruction from our interviewers, our interviewees were instructed to do various tasks on the Canvas website in order for us to study how they would accomplish a given task and whether or not their use of the program differed from our experiences using Canvas. All full contextual inquiries conducted can also be found in the [project documentation folder under contextual interviews](https://github.com/jack-margeson/alterna-canvas/tree/main/project-documentation/contextual-inquiries). A summary of interesting found differences from the contextual inquiries:
-- interesting point 1
-- interesting point 2
+- The participants that we observed both went into the files of Canvas to find the syllabus. Although one participant initialize tried using the Syllabus tab, due to the professor's mistake of improper configuration, the syllabus was not displayed. The one participant would then also go into the files tab to manually search for the syllabus file.
+- The participants that we observed had different approaches to seeing what assignments' due dates were upcoming. One utilized the calendar feature while another visited the class page itself then to the assignments tab to see which assignments are upcoming for that class.
 
 ## Project Requirements
 
