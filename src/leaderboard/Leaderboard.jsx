@@ -4,7 +4,7 @@ import "./Leaderboard.scss";
 function Leaderboard({childToParent, first, second, third}) {
     childToParent("Classes");
     let points = document.getElementById("points").textContent;
-    let rank = "3rd";
+    let rank;
     if (points === "2000"){
         rank = "4th";
     }
@@ -14,7 +14,7 @@ function Leaderboard({childToParent, first, second, third}) {
     else if (points === "2400"){
         rank = "1st";
     }
-    else if (points === "2021"){
+    else if (points === "2021" || points === " 2021"){
         rank = "3rd";
     }
     else{
