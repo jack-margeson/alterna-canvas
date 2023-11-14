@@ -18,6 +18,7 @@ import Avatar from "@mui/material/Avatar";
 import ListItemText from "@mui/material/ListItemText";
 import ListItemButton from "@mui/material/ListItemButton";
 import AnnouncementIcon from "@mui/icons-material/Announcement";
+import ProgressBar from "@ramonak/react-progress-bar";
 
 import ComputerGraphicsHW4 from "../course-data/computer_graphics/assignments/assignment_04";
 import ComputerGraphicsSyllabus from "../course-data/computer_graphics/course_info/computer_graphics_syllabus";
@@ -53,12 +54,14 @@ function ClassPage({ childToParent, course }) {
 		false,
 	]);
 
+	const [classProgress, setClassProgress] = React.useState([45, 60, 70]);
+
 	const [currAdditionalInformation, setCurrAdditionalInformation] =
 		React.useState([-1]);
 
 	const additionalInformation = [
-		<SeniorDesignAnnouncement></SeniorDesignAnnouncement>, 
-		<ComputerGraphicsAnnouncement></ComputerGraphicsAnnouncement>, 
+		<SeniorDesignAnnouncement></SeniorDesignAnnouncement>,
+		<ComputerGraphicsAnnouncement></ComputerGraphicsAnnouncement>,
 		<UiAnnouncement></UiAnnouncement>,
 		<SeniorDesignHW1></SeniorDesignHW1>,
 		<ComputerGraphicsHW4></ComputerGraphicsHW4>,
@@ -79,15 +82,15 @@ function ClassPage({ childToParent, course }) {
 	];
 
 	const handleDownload = (event, filePath) => {
-		event.preventDefault(); 
+		event.preventDefault();
 		const link = document.createElement("a");
 		link.href = filePath;
-		link.download = filePath.split('/').pop(); 
-		document.body.appendChild(link); 
-		link.click(); 
-		document.body.removeChild(link); 
-	  };
-	  
+		link.download = filePath.split('/').pop();
+		document.body.appendChild(link);
+		link.click();
+		document.body.removeChild(link);
+	};
+
 
 	const toggleAccordion = (index, expanded) => {
 		let temp = [false, false, false, false, false];
@@ -140,6 +143,30 @@ function ClassPage({ childToParent, course }) {
 			document.getElementById("points").style.color = tmpColor;
 		}, 3000);
 		setSubmitButtonStatus(true);
+
+		// change class progress 
+		if (course === "CS5001") {
+			let tmpProg = classProgress;
+			tmpProg[0] += 10;
+			if (tmpProg[0] > 100) {
+				tmpProg[0] = 100;
+			}
+			setClassProgress(tmpProg);
+		} else if (course === "CS5160") {
+			let tmpProg = classProgress;
+			tmpProg[1] += 10;
+			if (tmpProg[1] > 100) {
+				tmpProg[1] = 100;
+			}
+			setClassProgress(tmpProg);
+		} else {
+			let tmpProg = classProgress;
+			tmpProg[2] += 10;
+			if (tmpProg[2] > 100) {
+				tmpProg[2] = 100;
+			}
+			setClassProgress(tmpProg);
+		}
 	}
 
 	let gradesInformation = <p></p>;
@@ -485,20 +512,20 @@ function ClassPage({ childToParent, course }) {
 						<Typography>Course Materials</Typography>
 					</AccordionSummary>
 					<AccordionDetails
-							sx={{
-								margin: "0",
-								padding: "0",
-								maxHeight: "auto",
-								overflowY: "auto",
-							}}
-							>
-							{course === "CS5001" && (
-								<>
+						sx={{
+							margin: "0",
+							padding: "0",
+							maxHeight: "auto",
+							overflowY: "auto",
+						}}
+					>
+						{course === "CS5001" && (
+							<>
 								<List
 									sx={{
-									width: "100%",
-									maxWidth: 360,
-									bgcolor: "background.paper",
+										width: "100%",
+										maxWidth: 360,
+										bgcolor: "background.paper",
 									}}
 								>
 									<ListItem>
@@ -522,9 +549,9 @@ function ClassPage({ childToParent, course }) {
 										</ListItemButton>
 									</ListItem>
 								</List>
-								</>
-							)}
-						</AccordionDetails>
+							</>
+						)}
+					</AccordionDetails>
 
 
 					<AccordionDetails
@@ -929,6 +956,25 @@ function ClassPage({ childToParent, course }) {
 					{additionalInformation[currAdditionalInformation]}
 				</div>
 			</Dialog>
+			{course === "CS5001" && (
+				<div style={{ marginTop: "1em" }}>
+					<h2 style={{ color: "#dedbd6", marginBottom: "15px" }}>Course Progress:</h2>
+					<ProgressBar bgColor="#07393cff" completed={classProgress[0]} />
+				</div>
+			)}
+			{course === "CS5160" && (
+				<div style={{ marginTop: "1em" }}>
+					<h2 style={{ color: "#dedbd6", marginBottom: "15px" }}>Course Progress:</h2>
+					<ProgressBar bgColor="#07393cff" completed={classProgress[1]} />
+				</div>
+			)}
+			{course === "CS5167" && (
+				<div style={{ marginTop: "1em", marginBottom: "15px" }}>
+					<h2 style={{ color: "#dedbd6" }}>Course Progress:</h2>
+					<ProgressBar bgColor="#07393cff" completed={classProgress[2]} />
+				</div>
+			)}
+
 		</div>
 	);
 }

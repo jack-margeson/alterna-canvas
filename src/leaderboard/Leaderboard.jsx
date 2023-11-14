@@ -14,7 +14,7 @@ function Leaderboard({childToParent, first, second, third}) {
     else if (points === "2400"){
         rank = "1st";
     }
-    else if (points === "2021"){
+    else if (points === "2021" || points === " 2021"){
         rank = "3rd";
     }
     else{
