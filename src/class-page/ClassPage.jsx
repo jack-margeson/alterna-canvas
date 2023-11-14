@@ -58,8 +58,8 @@ function ClassPage({ childToParent, course }) {
 		React.useState([-1]);
 
 	const additionalInformation = [
-		<SeniorDesignAnnouncement></SeniorDesignAnnouncement>, 
-		<ComputerGraphicsAnnouncement></ComputerGraphicsAnnouncement>, 
+		<SeniorDesignAnnouncement></SeniorDesignAnnouncement>,
+		<ComputerGraphicsAnnouncement></ComputerGraphicsAnnouncement>,
 		<UiAnnouncement></UiAnnouncement>,
 		<SeniorDesignHW1></SeniorDesignHW1>,
 		<ComputerGraphicsHW4></ComputerGraphicsHW4>,
@@ -80,15 +80,15 @@ function ClassPage({ childToParent, course }) {
 	];
 
 	const handleDownload = (event, filePath) => {
-		event.preventDefault(); 
+		event.preventDefault();
 		const link = document.createElement("a");
 		link.href = filePath;
-		link.download = filePath.split('/').pop(); 
-		document.body.appendChild(link); 
-		link.click(); 
-		document.body.removeChild(link); 
-	  };
-	  
+		link.download = filePath.split('/').pop();
+		document.body.appendChild(link);
+		link.click();
+		document.body.removeChild(link);
+	};
+
 
 	const toggleAccordion = (index, expanded) => {
 		let temp = [false, false, false, false, false];
@@ -486,20 +486,20 @@ function ClassPage({ childToParent, course }) {
 						<Typography>Course Materials</Typography>
 					</AccordionSummary>
 					<AccordionDetails
-							sx={{
-								margin: "0",
-								padding: "0",
-								maxHeight: "auto",
-								overflowY: "auto",
-							}}
-							>
-							{course === "CS5001" && (
-								<>
+						sx={{
+							margin: "0",
+							padding: "0",
+							maxHeight: "auto",
+							overflowY: "auto",
+						}}
+					>
+						{course === "CS5001" && (
+							<>
 								<List
 									sx={{
-									width: "100%",
-									maxWidth: 360,
-									bgcolor: "background.paper",
+										width: "100%",
+										maxWidth: 360,
+										bgcolor: "background.paper",
 									}}
 								>
 									<ListItem>
@@ -523,9 +523,9 @@ function ClassPage({ childToParent, course }) {
 										</ListItemButton>
 									</ListItem>
 								</List>
-								</>
-							)}
-						</AccordionDetails>
+							</>
+						)}
+					</AccordionDetails>
 
 
 					<AccordionDetails
@@ -931,24 +931,24 @@ function ClassPage({ childToParent, course }) {
 				</div>
 			</Dialog>
 			{course === "CS5001" && (
-				<div style={{marginTop: "1em"}}>
-					<h2 style={{color: "white"}}>Course Progress:</h2>
-					<ProgressBar bgColor="blue" completed="45" />
+				<div style={{ marginTop: "1em" }}>
+					<h2 style={{ color: "#dedbd6", marginBottom: "15px" }}>Course Progress:</h2>
+					<ProgressBar bgColor="#07393cff" completed="45" />
 				</div>
 			)}
 			{course === "CS5160" && (
-				<div style={{marginTop: "1em"}}>
-					<h2 style={{color: "white"}}>Course Progress:</h2>
-					<ProgressBar bgColor="blue" completed="60" />
+				<div style={{ marginTop: "1em" }}>
+					<h2 style={{ color: "#dedbd6", marginBottom: "15px" }}>Course Progress:</h2>
+					<ProgressBar bgColor="#07393cff" completed="60" />
 				</div>
 			)}
 			{course === "CS5167" && (
-				<div style={{marginTop: "1em"}}>
-					<h2 style={{color: "white"}}>Course Progress:</h2>
-					<ProgressBar bgColor="blue" completed="65" />
+				<div style={{ marginTop: "1em", marginBottom: "15px" }}>
+					<h2 style={{ color: "#dedbd6" }}>Course Progress:</h2>
+					<ProgressBar bgColor="#07393cff" completed="65" />
 				</div>
 			)}
-			
+
 		</div>
 	);
 }
