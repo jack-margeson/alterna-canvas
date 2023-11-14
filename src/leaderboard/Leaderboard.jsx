@@ -8,15 +8,48 @@ function Leaderboard({childToParent, name1, pts1, name2, pts2, name3, pts3}) {
     let rank;
 
     const timebuttonPressed = () => {
-		pts1 = pts1 + Math.floor(Math.random() * 170) + 150;
-        document.getElementById("1text").textContent = name1.concat(", ",pts1.toString());
-        pts2 = pts2 + Math.floor(Math.random() * 150) + 130;
-        document.getElementById("2text").textContent = name2.concat(", ",pts2.toString());
-        pts3 = pts3 + Math.floor(Math.random() * 130) + 110;
-        document.getElementById("3text").textContent = name3.concat(", ",pts3.toString());
-        points = points + Math.floor(Math.random() * 110) + 90;
-        document.getElementById("points").textContent = points;
-        document.getElementById("pid").textContent = "Your cumulative points: ".concat(points.toString());
+        if(pts1 === points){
+            pts1 = pts1 + Math.floor(Math.random() * 170) + 150;
+            document.getElementById("1text").textContent = name1.concat(", ",pts1.toString());
+            pts2 = pts2 + Math.floor(Math.random() * 150) + 130;
+            document.getElementById("2text").textContent = name2.concat(", ",pts2.toString());
+            pts3 = pts3 + Math.floor(Math.random() * 130) + 110;
+            document.getElementById("3text").textContent = name3.concat(", ",pts3.toString());
+            document.getElementById("points").textContent = pts1;
+            document.getElementById("pid").textContent = "Your cumulative points: ".concat(points.toString());
+        }
+        else if (pts2 === points){
+            pts1 = pts1 + Math.floor(Math.random() * 170) + 150;
+            document.getElementById("1text").textContent = name1.concat(", ",pts1.toString());
+            pts2 = pts2 + Math.floor(Math.random() * 150) + 130;
+            document.getElementById("2text").textContent = name2.concat(", ",pts2.toString());
+            pts3 = pts3 + Math.floor(Math.random() * 130) + 110;
+            document.getElementById("3text").textContent = name3.concat(", ",pts3.toString());
+            document.getElementById("points").textContent = pts2;
+            document.getElementById("pid").textContent = "Your cumulative points: ".concat(points.toString());
+        }
+        else if (pts3 === points){
+            pts1 = pts1 + Math.floor(Math.random() * 170) + 150;
+            document.getElementById("1text").textContent = name1.concat(", ",pts1.toString());
+            pts2 = pts2 + Math.floor(Math.random() * 150) + 130;
+            document.getElementById("2text").textContent = name2.concat(", ",pts2.toString());
+            pts3 = pts3 + Math.floor(Math.random() * 130) + 110;
+            document.getElementById("3text").textContent = name3.concat(", ",pts3.toString());
+            document.getElementById("points").textContent = pts3;
+            document.getElementById("pid").textContent = "Your cumulative points: ".concat(points.toString());
+        }
+        else{
+            pts1 = pts1 + Math.floor(Math.random() * 170) + 150;
+            document.getElementById("1text").textContent = name1.concat(", ",pts1.toString());
+            pts2 = pts2 + Math.floor(Math.random() * 150) + 130;
+            document.getElementById("2text").textContent = name2.concat(", ",pts2.toString());
+            pts3 = pts3 + Math.floor(Math.random() * 130) + 110;
+            document.getElementById("3text").textContent = name3.concat(", ",pts3.toString());
+            points = points + Math.floor(Math.random() * 110) + 90;
+            document.getElementById("points").textContent = points;
+            document.getElementById("pid").textContent = "Your cumulative points: ".concat(points.toString());
+        }
+		
 	};
 
     if (points >= pts1){
