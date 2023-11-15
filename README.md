@@ -2,6 +2,10 @@
 - Repository for CS5167 User Interface I project #2, Alterna-Canvas, the game.
 - Developed by Jack Margeson, Alex Yang, Kody Penn, and Al Ayoola.
 
+## Video Walkthrough
+View the video walkthrough of Alterna Canvas on YouTube:
+https://youtu.be/TJQSG_bS374
+
 ## Sketches
 In our mission to redesign Canvas, our team iterated over several designs through a 10-10 sketching process. Below are the sketches that we generated using Discord Whiteboard, a collaborative drawing tool. Many of these preliminary ideas were incorporated into our final design. Before each set of sketches, we present the central question/problem statement that'd we'd like to address in our Alterna Canvas project, with a short summary of the importance of the statement.
 
