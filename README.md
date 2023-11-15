@@ -37,8 +37,12 @@ The site layout sketch was translated into an assortment of flexboxes for the pu
 ## Interviews 
 
 Several interviews were conducted by each member of the team to create a comprehensive view of what people who use Canvas think about the current design and functionality. Within this GitHub repository, all full interview documents can be found in the [project documentation folder under interviews](https://github.com/jack-margeson/alterna-canvas/tree/main/project-documentation/interviews). A summary of common points that were brought up across the interviews:
-- common point 1
-- common point 2
+- The most common daily usage of Canvas was looking at upcoming assignments.
+- Dashboard, to-do list, and modules are the most commonly used features.
+- History, inbox, big blue button, and Office 365 are common features that are rarely used.
+- The majority felt that the current state of Canvas is just fine.
+- Everyone one we interviewed said assignments should be an activity that rewards points.
+- Most of our interviewees think rewards should include extra credit.
 
 ## Contextual Inquiry
 
