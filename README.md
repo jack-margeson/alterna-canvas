@@ -41,7 +41,7 @@ Several interviews were conducted by each member of the team to create a compreh
 - Dashboard, to-do list, and modules are the most commonly used features.
 - History, inbox, big blue button, and Office 365 are common features that are rarely used.
 - The majority felt that the current state of Canvas is just fine.
-- Everyone one we interviewed said assignments should be an activity that rewards points.
+- Everyone we interviewed said assignments should be an activity that rewards points.
 - Most of our interviewees think rewards should include extra credit.
 
 ## Contextual Inquiry
