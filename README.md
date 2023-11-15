@@ -120,7 +120,7 @@ When a student accesses the To-do tab through the Navigation menu for the first 
 ![image](https://github.com/jack-margeson/alterna-canvas/assets/31900546/48d60067-65d6-4e59-9b06-9f3831042917)
 
 ### Division of work
-Jack Margeson: 2 interviews, 1 contextual interview, in-class project activities, sketches, coding (Main layout, Assignment submissions, To-do list), 77% of documentation
-Kody Penn: 2 interviews, in-class project activities, sketches, coding (Titlebar, Navbar, Announcements, Upcoming assignments, View grades, To-do list), 9% of documentation
-Alex Yang: 2 interviews, 1 contextual interview, in-class project activities, sketches, coding (Profile, Syllabus, Course progress, Zoom connection, Sequence of tasks), 7% of documentation
-Al Ayoola: 2 interviews, in-class project activities, sketches, coding (Class cards, Course materials), 7% of documentation
+- Jack Margeson: 2 interviews, 1 contextual interview, in-class project activities, sketches, coding (Main layout, Assignment submissions, To-do list), 77% of documentation
+- Kody Penn: 2 interviews, in-class project activities, sketches, coding (Titlebar, Navbar, Announcements, Upcoming assignments, View grades, To-do list), 9% of documentation
+- Alex Yang: 2 interviews, 1 contextual interview, in-class project activities, sketches, coding (Profile, Syllabus, Course progress, Zoom connection, Sequence of tasks), 7% of documentation
+- Al Ayoola: 2 interviews, in-class project activities, sketches, coding (Class cards, Course materials), 7% of documentation
